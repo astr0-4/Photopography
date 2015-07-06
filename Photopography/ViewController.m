@@ -16,6 +16,10 @@
 
 @property (assign, nonatomic) INTULocationRequestID locationRequestID;
 
+@property (nonatomic) CLLocationDegrees latitude;
+@property (nonatomic) CLLocationDegrees longitude;
+
+
 @end
 
 @implementation ViewController
@@ -75,6 +79,11 @@
 //                                      strongSelf.statusLabel.text = [strongSelf getErrorDescription:status];
                                   }
                                   
+                                  self.longitude = currentLocation.coordinate.longitude;
+                                  self.latitude = currentLocation.coordinate.latitude;
+                                  NSLog (@"coordinate 1: %f, coordinate 2: %f\n", self.longitude, self.latitude);
+
+                                  
 //                                  strongSelf.locationRequestID = NSNotFound;
                               }];
 }
@@ -82,6 +91,8 @@
 - (IBAction)startButtonTapped:(id)sender {
     [self startSingleLocationRequest];
 }
+
+
 
 
 
