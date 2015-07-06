@@ -26,8 +26,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="S9l-jQ-d6u"/>
-                                    <segue destination="FPg-zl-Jzb" kind="push" id="bte-Dr-Hw0"/>
+                                    <segue destination="FPg-zl-Jzb" kind="push" identifier="showPhotos" id="Q5w-wZ-EIi"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZL-We-Asl">
@@ -49,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="346"/>
+            <point key="canvasLocation" x="587" y="346"/>
         </scene>
         <!--Flickr Photo View Controller-->
         <scene sceneID="R8a-yP-24x">
@@ -98,7 +97,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxH-dU-f9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1241" y="346"/>
+            <point key="canvasLocation" x="1002" y="346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HPj-5k-YNs">

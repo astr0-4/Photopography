@@ -11,19 +11,18 @@
 #import "FlickrPhotoCell.h"
 
 @interface FlickrPhotoViewController ()
-
+@property (assign, nonatomic) INTULocationRequestID locationRequestID;
 @end
 
 @implementation FlickrPhotoViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-//    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&group_id=35034362597%%40N01&has_geo=1&lat=43.655704&lon=-79.380644&radius//=0.1&format=json&nojsoncallback=1", API_KEY];
-       NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&has_geo=1&lat=43.655704&lon=-79.380644&radius=0.1&format=json&nojsoncallback=1", API_KEY];
-
+- (void)loadPhotos {
+    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&has_geo=1&lat=%f&lon=%f&radius=0.1&format=json&nojsoncallback=1", API_KEY, self.latitude, self.longitude];
+    
     NSURL *url = [NSURL URLWithString:urlString];
     NSLog(@"url: %@ ", url);
     
+    NSLog(@"latitude: %f , longitude: %f", self.latitude, self.longitude);
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSError *jsonError;
@@ -48,12 +47,17 @@
                 self.photoObjects = [photosTemp mutableCopy];
                 [self.collectionView reloadData];
                 NSLog(@"photo object %@", [self.photoObjects firstObject]);
+                
             });
         }
     }];
     
     [task resume];
+}
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self startSingleLocationRequest];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,41 +104,31 @@
         UIImage *myImage = [[UIImage alloc] initWithData:data];
         dispatch_async(dispatch_get_main_queue(), ^{
             cell.photoImageView.image = myImage;
+           
         });
     }];
     cell.task = task;
     [task resume];
 }
 
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+- (void)startSingleLocationRequest
+{
+    
+    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
+    self.locationRequestID = [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyBlock
+                                                                timeout:10
+                                                                  block:
+                              ^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+                                  
+                                  if (status == INTULocationStatusSuccess) {
+                                      self.longitude = currentLocation.coordinate.longitude;
+                                      self.latitude = currentLocation.coordinate.latitude;
+                                      NSLog (@"coordinate 1: %f, coordinate 2: %f\n", self.longitude, self.latitude);
+                                      [self loadPhotos];
+                                  }
+                              }];
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
 
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end
