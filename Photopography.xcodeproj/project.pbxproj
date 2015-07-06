@@ -15,6 +15,7 @@
 		65ADCC001B4AD0510076B4AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65ADCBFF1B4AD0510076B4AE /* Images.xcassets */; };
 		65ADCC031B4AD0510076B4AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ADCC011B4AD0510076B4AE /* LaunchScreen.xib */; };
 		65ADCC0F1B4AD0510076B4AE /* PhotopographyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADCC0E1B4AD0510076B4AE /* PhotopographyTests.m */; };
+		65ADCC191B4AF7940076B4AE /* BlankMap-World-noborders.png in Resources */ = {isa = PBXBuildFile; fileRef = 65ADCC181B4AF7940076B4AE /* BlankMap-World-noborders.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		65ADCC081B4AD0510076B4AE /* PhotopographyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotopographyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ADCC0D1B4AD0510076B4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65ADCC0E1B4AD0510076B4AE /* PhotopographyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotopographyTests.m; sourceTree = "<group>"; };
+		65ADCC181B4AF7940076B4AE /* BlankMap-World-noborders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlankMap-World-noborders.png"; sourceTree = "<group>"; };
 		AD2D9341B2A7AC96FBF08185 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 		65ADCBF11B4AD0510076B4AE /* Photopography */ = {
 			isa = PBXGroup;
 			children = (
+				65ADCC181B4AF7940076B4AE /* BlankMap-World-noborders.png */,
 				65ADCBF61B4AD0510076B4AE /* AppDelegate.h */,
 				65ADCBF71B4AD0510076B4AE /* AppDelegate.m */,
 				65ADCBF91B4AD0510076B4AE /* ViewController.h */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65ADCBFE1B4AD0510076B4AE /* Main.storyboard in Resources */,
+				65ADCC191B4AF7940076B4AE /* BlankMap-World-noborders.png in Resources */,
 				65ADCC031B4AD0510076B4AE /* LaunchScreen.xib in Resources */,
 				65ADCC001B4AD0510076B4AE /* Images.xcassets in Resources */,
 			);

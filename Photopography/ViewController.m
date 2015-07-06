@@ -23,6 +23,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UIInterpolatingMotionEffect *verticalMotionEffect =
+    [[UIInterpolatingMotionEffect alloc]
+     initWithKeyPath:@"center.y"
+     type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    verticalMotionEffect.minimumRelativeValue = @(-30);
+    verticalMotionEffect.maximumRelativeValue = @(30);
+    
+    // Set horizontal effect
+    UIInterpolatingMotionEffect *horizontalMotionEffect =
+    [[UIInterpolatingMotionEffect alloc]
+     initWithKeyPath:@"center.x"
+     type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    horizontalMotionEffect.minimumRelativeValue = @(-30);
+    horizontalMotionEffect.maximumRelativeValue = @(30);
+    
+    // Create group to combine both
+    UIMotionEffectGroup *group = [UIMotionEffectGroup new];
+    group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
+    
+    // Add both effects to your view
+    [self.backgroundImageView addMotionEffect:group];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,6 +82,8 @@
 - (IBAction)startButtonTapped:(id)sender {
     [self startSingleLocationRequest];
 }
+
+
 
 
 @end
