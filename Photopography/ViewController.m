@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <INTULocationManager/INTULocationManager.h>
+#import "FlickrPhotoViewController.h"
 
 @interface ViewController ()
 
@@ -55,47 +56,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)startSingleLocationRequest
-{
-    __weak __typeof(self) weakSelf = self;
-    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
-    self.locationRequestID = [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyBlock
-                                                                timeout:10
-                                                                  block:
-                              ^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
-                                  __typeof(weakSelf) strongSelf = weakSelf;
-                                  
-                                  if (status == INTULocationStatusSuccess) {
-                                      // achievedAccuracy is at least the desired accuracy (potentially better)
-                                      strongSelf.statusLabel.text = [NSString stringWithFormat:@"Location request successful! Current Location:\n%@", currentLocation];
-                                  }
-                                  else if (status == INTULocationStatusTimedOut) {
-                                      // You may wish to inspect achievedAccuracy here to see if it is acceptable, if you plan to use currentLocation
-                                      strongSelf.statusLabel.text = [NSString stringWithFormat:@"Location request timed out. Current Location:\n%@", currentLocation];
-                                  }
-                                  else {
-                                      // An error occurred
-//                                      strongSelf.statusLabel.text = [strongSelf getErrorDescription:status];
-                                  }
-                                  
-                                  self.longitude = currentLocation.coordinate.longitude;
-                                  self.latitude = currentLocation.coordinate.latitude;
-                                  NSLog (@"coordinate 1: %f, coordinate 2: %f\n", self.longitude, self.latitude);
-
-                                  
-//                                  strongSelf.locationRequestID = NSNotFound;
-                              }];
-}
-
-- (IBAction)startButtonTapped:(id)sender {
-    [self startSingleLocationRequest];
-}
-
-
-
-
-
 
 @end
 
