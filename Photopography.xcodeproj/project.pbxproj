@@ -56,6 +56,7 @@
 		FA6018AE1B4B09CB00E1166C /* FlickrPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoViewController.m; sourceTree = "<group>"; };
 		FA6018B21B4B138900E1166C /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		FA6018B41B4B392A00E1166C /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		FA6018B51B4B406C00E1166C /* OtherLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OtherLocation.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +115,7 @@
 				65ADCBFC1B4AD0510076B4AE /* Main.storyboard */,
 				65ADCBFF1B4AD0510076B4AE /* Images.xcassets */,
 				FA6018B21B4B138900E1166C /* Location.gpx */,
+				FA6018B51B4B406C00E1166C /* OtherLocation.gpx */,
 				65ADCC011B4AD0510076B4AE /* LaunchScreen.xib */,
 				65ADCBF21B4AD0510076B4AE /* Supporting Files */,
 			);
