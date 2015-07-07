@@ -165,6 +165,6 @@
 
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(200, 0, 200, 0);
+    return UIEdgeInsetsMake(200, 20, 200, 20);
 }
 @end
