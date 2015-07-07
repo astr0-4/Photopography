@@ -6,6 +6,12 @@
 // project.
 
 
+// BEMSimpleLineGraph
+#define COCOAPODS_POD_AVAILABLE_BEMSimpleLineGraph
+#define COCOAPODS_VERSION_MAJOR_BEMSimpleLineGraph 4
+#define COCOAPODS_VERSION_MINOR_BEMSimpleLineGraph 0
+#define COCOAPODS_VERSION_PATCH_BEMSimpleLineGraph 0
+
 // INTULocationManager
 #define COCOAPODS_POD_AVAILABLE_INTULocationManager
 #define COCOAPODS_VERSION_MAJOR_INTULocationManager 3

@@ -132,11 +132,69 @@
                             <outlet property="delegate" destination="FPg-zl-Jzb" id="AYP-GP-67D"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="maK-sU-eZF"/>
+                    <navigationItem key="navigationItem" id="maK-sU-eZF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="QZn-Pb-kPE">
+                            <connections>
+                                <segue destination="CUD-BI-nlL" kind="push" id="OgC-Ph-5EQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxH-dU-f9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002" y="346"/>
+        </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="qOD-SJ-emS">
+            <objects>
+                <viewController id="CUD-BI-nlL" customClass="GraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x6b-Yf-nW8"/>
+                        <viewControllerLayoutGuide type="bottom" id="xVA-4p-NfN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uvy-T6-DrY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2P-Vt-BrX" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="10" y="94" width="300" height="380"/>
+                                <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorXaxisLabel">
+                                        <color key="value" red="0.18998533487319946" green="0.35768887400627136" blue="0.43821841478347778" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorYaxisLabel">
+                                        <color key="value" red="0.18998533487319946" green="0.35768887400627136" blue="0.43821841478347778" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableYAxisLabel" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableXAxisLabel" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
+                                        <color key="value" red="0.1911550909280777" green="0.6378670334815979" blue="0.26147949695587158" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
+                                        <color key="value" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorLine">
+                                        <color key="value" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="CUD-BI-nlL" id="cWV-7p-Ee2"/>
+                                    <outlet property="delegate" destination="CUD-BI-nlL" id="62r-WZ-zO5"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Vw-k3-vni"/>
+                    <connections>
+                        <outlet property="graphView" destination="m2P-Vt-BrX" id="ltM-CV-hY0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AGV-tG-Xwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377" y="346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HPj-5k-YNs">
