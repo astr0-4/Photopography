@@ -75,14 +75,14 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zjy-Ky-5nm">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="256"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-c8-GSr">
-                                            <rect key="frame" x="8" y="328" width="271" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-tl-F3A">
+                                            <rect key="frame" x="8" y="316" width="271" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-kT-deU">
-                                            <rect key="frame" x="8" y="293" width="271" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buT-dc-8cP">
+                                            <rect key="frame" x="8" y="281" width="271" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -91,21 +91,15 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" id="8MC-4k-2d9"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="EJF-nq-V3W"/>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="ajO-CN-osx"/>
-                                    <constraint firstItem="3nS-kT-deU" firstAttribute="trailing" secondItem="qNF-x2-bGx" secondAttribute="trailingMargin" id="bct-a9-NJS"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="3nS-kT-deU" secondAttribute="bottom" constant="42" id="bwy-Mf-FEu"/>
-                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leadingMargin" id="isE-Id-uFQ"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" constant="100" id="pUi-M2-ovG"/>
-                                    <constraint firstItem="3nS-kT-deU" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leadingMargin" id="x0y-Pw-fFT"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="1oe-c8-GSr" secondAttribute="bottom" constant="7" id="xBO-2t-wnn"/>
-                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="trailing" secondItem="qNF-x2-bGx" secondAttribute="trailingMargin" id="yKW-Bl-24D"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" placeholder="YES" id="8MC-4k-2d9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" placeholder="YES" id="EJF-nq-V3W"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" placeholder="YES" id="ajO-CN-osx"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" constant="100" placeholder="YES" id="pUi-M2-ovG"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="photoImageView" destination="Zjy-Ky-5nm" id="quk-uX-abU"/>
-                                    <outlet property="photographerLabel" destination="1oe-c8-GSr" id="rPg-nh-nFn"/>
-                                    <outlet property="titleLabel" destination="3nS-kT-deU" id="oUg-Kh-YP0"/>
+                                    <outlet property="photographerLabel" destination="K9j-tl-F3A" id="eLr-Va-Vk8"/>
+                                    <outlet property="titleLabel" destination="buT-dc-8cP" id="rAR-Ij-Mwu"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

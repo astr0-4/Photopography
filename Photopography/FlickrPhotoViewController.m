@@ -57,6 +57,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self startSingleLocationRequest];
     
 }
@@ -90,12 +91,13 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     FlickrPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
     [self getPhotoImage:indexPath forCell:cell];
+    [self getPhotoDetails:indexPath forCell:cell];
     return cell;
 }
 
 
 -(void)getPhotoImage:(NSIndexPath *)indexPath forCell:(FlickrPhotoCell *)cell {
-    [cell.task cancel];
+    [cell.photoTask cancel];
     cell.photoImageView.image = nil;
     Photo *photo = [self.photoObjects objectAtIndex:indexPath.row];
     NSString *imageString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_b.jpg", photo.farm, photo.server, photo.photoID, photo.secret];
@@ -108,7 +110,7 @@
            
         });
     }];
-    cell.task = task;
+    cell.photoTask = task;
     [task resume];
 }
 
@@ -129,6 +131,36 @@
                                   }
                               }];
 }
+
+-(void)getPhotoDetails:(NSIndexPath *)indexPath forCell:(FlickrPhotoCell *)cell  {
+    [cell.detailTask cancel];
+    cell.titleLabel.text = nil;
+    cell.photographerLabel.text = nil;
+    Photo *photo = [self.photoObjects objectAtIndex:indexPath.row];
+    NSString *photoInfoString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=%@&photo_id=%@&format=json&nojsoncallback=1", API_KEY, photo.photoID];
+    NSURL *photoInfoURL = [NSURL URLWithString:photoInfoString];
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:photoInfoURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSError *jsonError;
+        NSDictionary *resultDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        //for (NSString *dictKey in resultDict) {
+            NSDictionary *photoInfo = resultDict[@"photo"];
+            photo.photoTitle = [[photoInfo objectForKey:@"title"] objectForKey:@"_content"];
+            photo.photographer = [[photoInfo objectForKey:@"owner"] objectForKey:@"realname"];
+            photo.photoLocation = [[photoInfo objectForKey:@"owner"] objectForKey:@"location"];
+        //}
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.photographerLabel.text = photo.photographer;
+            cell.titleLabel.text = photo.photoTitle;
+            
+        });
+        
+
+    }];
+    cell.detailTask = task;
+    [task resume];
+    
+}
+
 
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {

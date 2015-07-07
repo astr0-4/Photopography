@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSString *photoID;
 @property (nonatomic, strong) NSString *secret;
 @property (nonatomic, strong) NSString *server;
-
+@property (nonatomic, strong) NSString *photoLocation;
+@property (nonatomic, strong) NSString *photoTitle;
+@property (nonatomic, strong) NSString *photographer;
 
 @end
