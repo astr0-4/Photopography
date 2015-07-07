@@ -57,5 +57,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showPhotos"]){
+    FlickrPhotoViewController *destinationViewController = (FlickrPhotoViewController *)segue.destinationViewController;
+    destinationViewController.managedObjectContext = self.managedObjectContext;
+    }
+}
+
+
 @end
 

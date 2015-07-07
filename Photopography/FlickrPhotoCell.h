@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) NSURLSessionDataTask *photoTask;
-@property (strong, nonatomic) NSURLSessionDataTask *detailTask;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *photographerLabel;

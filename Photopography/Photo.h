@@ -1,21 +1,26 @@
 //
 //  Photo.h
-//  FlickrGetter
+//  
 //
-//  Created by Alex on 2015-07-04.
-//  Copyright (c) 2015 Alex. All rights reserved.
+//  Created by Alex on 2015-07-07.
+//
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Photo : NSObject
+@class Location;
 
-@property (nonatomic, strong) NSString *farm;
-@property (nonatomic, strong) NSString *photoID;
-@property (nonatomic, strong) NSString *secret;
-@property (nonatomic, strong) NSString *server;
-@property (nonatomic, strong) NSString *photoLocation;
-@property (nonatomic, strong) NSString *photoTitle;
-@property (nonatomic, strong) NSString *photographer;
+@interface Photo : NSManagedObject
+
+@property (nonatomic, retain) NSString * farm;
+@property (nonatomic, retain) NSString * photoID;
+@property (nonatomic, retain) NSString * secret;
+@property (nonatomic, retain) NSString * server;
+@property (nonatomic, retain) NSString * photoLocation;
+@property (nonatomic, retain) NSString * photoTitle;
+@property (nonatomic, retain) NSString * photographer;
+@property (nonatomic, retain) NSDate * photoDate;
+@property (nonatomic, retain) Location *location;
 
 @end

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class NSManagedObjectContext;
+
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 
