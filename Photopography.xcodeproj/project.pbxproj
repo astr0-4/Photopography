@@ -15,7 +15,6 @@
 		65ADCC001B4AD0510076B4AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65ADCBFF1B4AD0510076B4AE /* Images.xcassets */; };
 		65ADCC031B4AD0510076B4AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ADCC011B4AD0510076B4AE /* LaunchScreen.xib */; };
 		65ADCC0F1B4AD0510076B4AE /* PhotopographyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADCC0E1B4AD0510076B4AE /* PhotopographyTests.m */; };
-		65ADCC1E1B4C278D0076B4AE /* GeogramBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65ADCC1D1B4C278D0076B4AE /* GeogramBG.jpg */; };
 		FA6018AF1B4B09CB00E1166C /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6018AA1B4B09CB00E1166C /* FlickrPhotoCell.m */; };
 		FA6018B01B4B09CB00E1166C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6018AC1B4B09CB00E1166C /* Photo.m */; };
 		FA6018B11B4B09CB00E1166C /* FlickrPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6018AE1B4B09CB00E1166C /* FlickrPhotoViewController.m */; };
@@ -48,7 +47,6 @@
 		65ADCC081B4AD0510076B4AE /* PhotopographyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotopographyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ADCC0D1B4AD0510076B4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65ADCC0E1B4AD0510076B4AE /* PhotopographyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotopographyTests.m; sourceTree = "<group>"; };
-		65ADCC1D1B4C278D0076B4AE /* GeogramBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GeogramBG.jpg; sourceTree = "<group>"; };
 		AD2D9341B2A7AC96FBF08185 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6018A91B4B09CB00E1166C /* FlickrPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoCell.h; sourceTree = "<group>"; };
 		FA6018AA1B4B09CB00E1166C /* FlickrPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoCell.m; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 		65ADCBF11B4AD0510076B4AE /* Photopography */ = {
 			isa = PBXGroup;
 			children = (
-				65ADCC1D1B4C278D0076B4AE /* GeogramBG.jpg */,
 				65ADCBF61B4AD0510076B4AE /* AppDelegate.h */,
 				FA6018B41B4B392A00E1166C /* APIKey.h */,
 				65ADCBF71B4AD0510076B4AE /* AppDelegate.m */,
@@ -252,7 +249,6 @@
 			files = (
 				65ADCBFE1B4AD0510076B4AE /* Main.storyboard in Resources */,
 				65ADCC031B4AD0510076B4AE /* LaunchScreen.xib in Resources */,
-				65ADCC1E1B4C278D0076B4AE /* GeogramBG.jpg in Resources */,
 				FA6018B31B4B138900E1166C /* Location.gpx in Resources */,
 				65ADCC001B4AD0510076B4AE /* Images.xcassets in Resources */,
 			);

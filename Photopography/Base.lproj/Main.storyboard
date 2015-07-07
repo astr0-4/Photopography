@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Geogram-->
@@ -17,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="GeogramBG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-Wy-p7v">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jY-kW-siO">
                                 <rect key="frame" x="110" y="267" width="101" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -34,17 +30,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ugb-Wy-p7v" secondAttribute="bottom" constant="-30" id="1WD-c3-7UW"/>
-                            <constraint firstItem="ugb-Wy-p7v" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-30" id="CsF-dX-C7X"/>
-                            <constraint firstItem="ugb-Wy-p7v" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-30" id="OID-Yg-QNE"/>
                             <constraint firstAttribute="centerY" secondItem="3jY-kW-siO" secondAttribute="centerY" id="Wgs-Sm-eSh"/>
                             <constraint firstAttribute="centerX" secondItem="3jY-kW-siO" secondAttribute="centerX" id="gOM-X8-tU2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ugb-Wy-p7v" secondAttribute="trailing" constant="-30" id="v9h-Lc-hI9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Geogram" id="LOS-D4-xrp"/>
                     <connections>
-                        <outlet property="backgroundImageView" destination="ugb-Wy-p7v" id="WRU-k2-gCY"/>
                         <outlet property="requestCurrentLocationButton" destination="3jY-kW-siO" id="ebY-uH-9NK"/>
                     </connections>
                 </viewController>
@@ -76,15 +67,23 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zjy-Ky-5nm">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="364"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9j-tl-F3A">
-                                            <rect key="frame" x="8" y="316" width="271" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Flickr Account Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-c8-GSr">
+                                            <rect key="frame" x="0.0" y="347" width="287" height="17"/>
+                                            <color key="backgroundColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="5tE-yO-6g9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buT-dc-8cP">
-                                            <rect key="frame" x="8" y="281" width="271" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Flickr Photo Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-kT-deU">
+                                            <rect key="frame" x="0.0" y="327" width="287" height="20"/>
+                                            <color key="backgroundColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="aKm-C0-k1E"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -92,15 +91,21 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" placeholder="YES" id="8MC-4k-2d9"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" placeholder="YES" id="EJF-nq-V3W"/>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" placeholder="YES" id="ajO-CN-osx"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" constant="100" placeholder="YES" id="pUi-M2-ovG"/>
+                                    <constraint firstItem="3nS-kT-deU" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="J07-xZ-7nO"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" id="OqK-75-lpZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="3nS-kT-deU" secondAttribute="trailing" id="RDk-9q-mNc"/>
+                                    <constraint firstAttribute="trailing" secondItem="1oe-c8-GSr" secondAttribute="trailing" id="Rc4-Jn-DBI"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="Ydg-6d-dGG"/>
+                                    <constraint firstAttribute="bottom" secondItem="1oe-c8-GSr" secondAttribute="bottom" id="con-Ic-3YF"/>
+                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="fKD-Rh-9IL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" id="twX-MR-qP4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="vTS-Fo-0tv"/>
+                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="top" secondItem="3nS-kT-deU" secondAttribute="bottom" id="wWb-97-yHm"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="photoImageView" destination="Zjy-Ky-5nm" id="quk-uX-abU"/>
-                                    <outlet property="photographerLabel" destination="K9j-tl-F3A" id="eLr-Va-Vk8"/>
-                                    <outlet property="titleLabel" destination="buT-dc-8cP" id="rAR-Ij-Mwu"/>
+                                    <outlet property="photographerLabel" destination="1oe-c8-GSr" id="dHs-7t-ft0"/>
+                                    <outlet property="titleLabel" destination="3nS-kT-deU" id="Liy-7l-FHm"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -135,9 +140,6 @@
             <point key="canvasLocation" x="162" y="346"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="GeogramBG.jpg" width="1277" height="2239"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
