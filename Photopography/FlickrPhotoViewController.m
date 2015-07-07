@@ -58,6 +58,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self startSingleLocationRequest];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,7 +98,7 @@
     [cell.task cancel];
     cell.photoImageView.image = nil;
     Photo *photo = [self.photoObjects objectAtIndex:indexPath.row];
-    NSString *imageString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_z.jpg", photo.farm, photo.server, photo.photoID, photo.secret];
+    NSString *imageString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_b.jpg", photo.farm, photo.server, photo.photoID, photo.secret];
     NSURL *imageURL = [NSURL URLWithString:imageString];
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:imageURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
@@ -130,5 +131,7 @@
 }
 
 
-
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(200, 0, 200, 0);
+}
 @end
