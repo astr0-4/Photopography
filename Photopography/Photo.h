@@ -17,5 +17,7 @@
 @property (nonatomic, strong) NSString *photoLocation;
 @property (nonatomic, strong) NSString *photoTitle;
 @property (nonatomic, strong) NSString *photographer;
+@property (nonatomic, strong) NSString *photoDate;
+
 
 @end

@@ -146,11 +146,12 @@
             NSDictionary *photoInfo = resultDict[@"photo"];
             photo.photoTitle = [[photoInfo objectForKey:@"title"] objectForKey:@"_content"];
             photo.photographer = [[photoInfo objectForKey:@"owner"] objectForKey:@"realname"];
-            photo.photoLocation = [[photoInfo objectForKey:@"owner"] objectForKey:@"location"];
+            photo.photoDate = [[photoInfo objectForKey:@"dates"] objectForKey:@"taken"];
         //}
         dispatch_async(dispatch_get_main_queue(), ^{
             cell.photographerLabel.text = photo.photographer;
             cell.titleLabel.text = photo.photoTitle;
+            cell.dateLabel.text = photo.photoDate;
             
         });
         

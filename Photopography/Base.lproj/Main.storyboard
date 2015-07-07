@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Geogram-->
@@ -67,42 +67,59 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zjy-Ky-5nm">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="364"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Flickr Account Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-c8-GSr">
-                                            <rect key="frame" x="0.0" y="347" width="287" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Account Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-c8-GSr">
+                                            <rect key="frame" x="0.0" y="332" width="287" height="17"/>
                                             <color key="backgroundColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="0.5" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="5tE-yO-6g9"/>
+                                                <constraint firstAttribute="height" constant="17" id="U8p-aa-Yvp"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Flickr Photo Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-kT-deU">
-                                            <rect key="frame" x="0.0" y="327" width="287" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pta-4O-G1s">
+                                            <rect key="frame" x="0.0" y="349" width="287" height="15"/>
+                                            <color key="backgroundColor" red="0.51784205439999997" green="0.58159953360000005" blue="0.58617168659999996" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="mLT-PJ-GaR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Photo Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-kT-deU">
+                                            <rect key="frame" x="0.0" y="312" width="287" height="20"/>
                                             <color key="backgroundColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="0.5" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="aKm-C0-k1E"/>
+                                                <constraint firstAttribute="height" constant="20" id="O6q-o1-sEH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="3nS-kT-deU" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="J07-xZ-7nO"/>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" id="OqK-75-lpZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="3nS-kT-deU" secondAttribute="trailing" id="RDk-9q-mNc"/>
-                                    <constraint firstAttribute="trailing" secondItem="1oe-c8-GSr" secondAttribute="trailing" id="Rc4-Jn-DBI"/>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="Ydg-6d-dGG"/>
-                                    <constraint firstAttribute="bottom" secondItem="1oe-c8-GSr" secondAttribute="bottom" id="con-Ic-3YF"/>
-                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="fKD-Rh-9IL"/>
-                                    <constraint firstAttribute="bottom" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" id="twX-MR-qP4"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="vTS-Fo-0tv"/>
-                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="top" secondItem="3nS-kT-deU" secondAttribute="bottom" id="wWb-97-yHm"/>
+                                    <constraint firstAttribute="trailing" secondItem="3nS-kT-deU" secondAttribute="trailing" id="1Pw-bI-7x3"/>
+                                    <constraint firstItem="Pta-4O-G1s" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="9rZ-UP-cEH"/>
+                                    <constraint firstItem="Pta-4O-G1s" firstAttribute="top" secondItem="1oe-c8-GSr" secondAttribute="bottom" id="DCX-OH-gq1"/>
+                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="top" secondItem="3nS-kT-deU" secondAttribute="bottom" id="DXe-mZ-5AY"/>
+                                    <constraint firstAttribute="trailing" secondItem="1oe-c8-GSr" secondAttribute="trailing" id="NKD-Ua-7DK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="OXu-Kr-elY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pta-4O-G1s" secondAttribute="bottom" id="QSp-es-GDp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pta-4O-G1s" secondAttribute="trailing" id="Qsa-I2-sAD"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" id="UKV-K1-s0R"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="gGZ-wK-aM9"/>
+                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="sFZ-WL-7YI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" id="wDR-ee-Png"/>
+                                    <constraint firstItem="3nS-kT-deU" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="y1m-oD-gex"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="dateLabel" destination="Pta-4O-G1s" id="09i-7k-rgw"/>
                                     <outlet property="photoImageView" destination="Zjy-Ky-5nm" id="quk-uX-abU"/>
                                     <outlet property="photographerLabel" destination="1oe-c8-GSr" id="dHs-7t-ft0"/>
                                     <outlet property="titleLabel" destination="3nS-kT-deU" id="Liy-7l-FHm"/>
