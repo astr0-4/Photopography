@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Geogram-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -16,34 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-Wy-p7v">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="GeogramBG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ugb-Wy-p7v">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jY-kW-siO">
-                                <rect key="frame" x="123" y="514" width="75" height="34"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                <state key="normal" title="Flickr me!">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jY-kW-siO">
+                                <rect key="frame" x="110" y="267" width="101" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Find photos!">
+                                    <color key="titleColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="FPg-zl-Jzb" kind="push" identifier="showPhotos" id="Q5w-wZ-EIi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZL-We-Asl">
-                                <rect key="frame" x="35" y="209" width="250" height="150"/>
-                                <color key="backgroundColor" red="0.68888300657272339" green="0.71366006135940552" blue="0.73448425531387329" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ugb-Wy-p7v" secondAttribute="bottom" constant="-30" id="1WD-c3-7UW"/>
+                            <constraint firstItem="ugb-Wy-p7v" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-30" id="CsF-dX-C7X"/>
+                            <constraint firstItem="ugb-Wy-p7v" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-30" id="OID-Yg-QNE"/>
+                            <constraint firstAttribute="centerY" secondItem="3jY-kW-siO" secondAttribute="centerY" id="Wgs-Sm-eSh"/>
+                            <constraint firstAttribute="centerX" secondItem="3jY-kW-siO" secondAttribute="centerX" id="gOM-X8-tU2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ugb-Wy-p7v" secondAttribute="trailing" constant="-30" id="v9h-Lc-hI9"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LOS-D4-xrp"/>
+                    <navigationItem key="navigationItem" title="Geogram" id="LOS-D4-xrp"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="ugb-Wy-p7v" id="WRU-k2-gCY"/>
                         <outlet property="requestCurrentLocationButton" destination="3jY-kW-siO" id="ebY-uH-9NK"/>
-                        <outlet property="statusLabel" destination="oZL-We-Asl" id="OG6-0p-eL5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -132,9 +134,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hWq-YR-1JM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kLe-eS-BZa">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="kLe-eS-BZa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -146,6 +149,9 @@
             <point key="canvasLocation" x="162" y="346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GeogramBG.jpg" width="1277" height="2239"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
