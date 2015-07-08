@@ -11,7 +11,7 @@
 #import "Location.h"
 #import <CoreData/CoreData.h>
 #import <INTULocationManager/INTULocationManager.h>
-#import "NSString+Words.h"
+#import "PhotoDetailViewController.h"
 
 @interface FlickrPhotoViewController : UICollectionViewController
 

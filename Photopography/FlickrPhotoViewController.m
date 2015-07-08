@@ -159,7 +159,6 @@
         UIImage *myImage = [[UIImage alloc] initWithData:data];
         dispatch_async(dispatch_get_main_queue(), ^{
             cell.photoImageView.image = myImage;
-            
         });
     }];
     cell.photoTask = task;
@@ -260,5 +259,15 @@
         return date;
     }
 }
+
+#pragma prepareForSegue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    PhotoDetailViewController *photoDetailViewController = (PhotoDetailViewController *)segue.destinationViewController;
+    photoDetailViewController.managedObjectContext = self.managedObjectContext;
+    NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
+    photoDetailViewController.photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+}
+
+
 
 @end

@@ -19,9 +19,9 @@
 		FA6018B11B4B09CB00E1166C /* FlickrPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6018AE1B4B09CB00E1166C /* FlickrPhotoViewController.m */; };
 		FA6018B31B4B138900E1166C /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FA6018B21B4B138900E1166C /* Location.gpx */; };
 		FA86C90C1B4C3E22008BA8AF /* Photopography.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA86C90A1B4C3E22008BA8AF /* Photopography.xcdatamodeld */; };
-		FA86C9151B4C4AAA008BA8AF /* NSString+Words.m in Sources */ = {isa = PBXBuildFile; fileRef = FA86C9141B4C4AAA008BA8AF /* NSString+Words.m */; };
 		FA86C9231B4C61AD008BA8AF /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = FA86C9201B4C61AD008BA8AF /* Location.m */; };
 		FA86C9241B4C61AD008BA8AF /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA86C9221B4C61AD008BA8AF /* Photo.m */; };
+		FA86C9271B4CA7C2008BA8AF /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA86C9261B4CA7C2008BA8AF /* PhotoDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +59,12 @@
 		FA6018B41B4B392A00E1166C /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
 		FA6018B51B4B406C00E1166C /* OtherLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OtherLocation.gpx; sourceTree = "<group>"; };
 		FA86C90B1B4C3E22008BA8AF /* Photopography.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photopography.xcdatamodel; sourceTree = "<group>"; };
-		FA86C9131B4C4AAA008BA8AF /* NSString+Words.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Words.h"; sourceTree = "<group>"; };
-		FA86C9141B4C4AAA008BA8AF /* NSString+Words.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Words.m"; sourceTree = "<group>"; };
 		FA86C91F1B4C61AD008BA8AF /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		FA86C9201B4C61AD008BA8AF /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		FA86C9211B4C61AD008BA8AF /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		FA86C9221B4C61AD008BA8AF /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		FA86C9251B4CA7C2008BA8AF /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		FA86C9261B4CA7C2008BA8AF /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +109,12 @@
 		65ADCBF11B4AD0510076B4AE /* Photopography */ = {
 			isa = PBXGroup;
 			children = (
+				FA6018A91B4B09CB00E1166C /* FlickrPhotoCell.h */,
+				FA6018AA1B4B09CB00E1166C /* FlickrPhotoCell.m */,
 				FA86C91F1B4C61AD008BA8AF /* Location.h */,
 				FA86C9201B4C61AD008BA8AF /* Location.m */,
 				FA86C9211B4C61AD008BA8AF /* Photo.h */,
 				FA86C9221B4C61AD008BA8AF /* Photo.m */,
-				FA86C9131B4C4AAA008BA8AF /* NSString+Words.h */,
-				FA86C9141B4C4AAA008BA8AF /* NSString+Words.m */,
 				FA6018B41B4B392A00E1166C /* APIKey.h */,
 				65ADCBF61B4AD0510076B4AE /* AppDelegate.h */,
 				65ADCBF71B4AD0510076B4AE /* AppDelegate.m */,
@@ -122,8 +122,8 @@
 				65ADCBFA1B4AD0510076B4AE /* ViewController.m */,
 				FA6018AD1B4B09CB00E1166C /* FlickrPhotoViewController.h */,
 				FA6018AE1B4B09CB00E1166C /* FlickrPhotoViewController.m */,
-				FA6018A91B4B09CB00E1166C /* FlickrPhotoCell.h */,
-				FA6018AA1B4B09CB00E1166C /* FlickrPhotoCell.m */,
+				FA86C9251B4CA7C2008BA8AF /* PhotoDetailViewController.h */,
+				FA86C9261B4CA7C2008BA8AF /* PhotoDetailViewController.m */,
 				65ADCBFC1B4AD0510076B4AE /* Main.storyboard */,
 				FA86C90A1B4C3E22008BA8AF /* Photopography.xcdatamodeld */,
 				65ADCBFF1B4AD0510076B4AE /* Images.xcassets */,
@@ -319,9 +319,9 @@
 				FA6018AF1B4B09CB00E1166C /* FlickrPhotoCell.m in Sources */,
 				FA86C9241B4C61AD008BA8AF /* Photo.m in Sources */,
 				FA86C90C1B4C3E22008BA8AF /* Photopography.xcdatamodeld in Sources */,
-				FA86C9151B4C4AAA008BA8AF /* NSString+Words.m in Sources */,
 				65ADCBF81B4AD0510076B4AE /* AppDelegate.m in Sources */,
 				FA86C9231B4C61AD008BA8AF /* Location.m in Sources */,
+				FA86C9271B4CA7C2008BA8AF /* PhotoDetailViewController.m in Sources */,
 				65ADCBF51B4AD0510076B4AE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
