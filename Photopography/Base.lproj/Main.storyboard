@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Geogram-->
@@ -43,7 +44,45 @@
             </objects>
             <point key="canvasLocation" x="587" y="346"/>
         </scene>
-        <!--Flickr Photo View Controller-->
+        <!--Location Activity-->
+        <scene sceneID="10p-nh-NiX">
+            <objects>
+                <viewController id="4jc-k6-GUY" customClass="GraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6e5-XB-4Lk"/>
+                        <viewControllerLayoutGuide type="bottom" id="wAa-uK-yu1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4se-Ro-QOa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDA-Ay-LD2" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4jc-k6-GUY" id="9zb-ZA-sgc"/>
+                                    <outlet property="delegate" destination="4jc-k6-GUY" id="xyC-3x-3vi"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wAa-uK-yu1" firstAttribute="top" secondItem="eDA-Ay-LD2" secondAttribute="bottom" id="KXC-Hu-a2z"/>
+                            <constraint firstItem="eDA-Ay-LD2" firstAttribute="leading" secondItem="4se-Ro-QOa" secondAttribute="leadingMargin" constant="-16" id="T7i-Mw-VeE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eDA-Ay-LD2" secondAttribute="trailing" constant="-16" id="nYM-z0-hGv"/>
+                            <constraint firstItem="eDA-Ay-LD2" firstAttribute="top" secondItem="6e5-XB-4Lk" secondAttribute="bottom" id="nhU-Wa-k8e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Location Activity" id="FK2-Ka-2am"/>
+                    <connections>
+                        <outlet property="graphView" destination="eDA-Ay-LD2" id="AYM-km-jcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRP-xq-caE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="-292"/>
+        </scene>
+        <!--Photos-->
         <scene sceneID="R8a-yP-24x">
             <objects>
                 <collectionViewController id="FPg-zl-Jzb" customClass="FlickrPhotoViewController" sceneMemberID="viewController">
@@ -114,7 +153,13 @@
                             <outlet property="delegate" destination="FPg-zl-Jzb" id="AYP-GP-67D"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="maK-sU-eZF"/>
+                    <navigationItem key="navigationItem" title="Photos" id="maK-sU-eZF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="366-03-5GP">
+                            <connections>
+                                <segue destination="4jc-k6-GUY" kind="push" id="zK5-Au-78h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Qwo-SA-Ag8" kind="push" identifier="showPhotoDetail" id="o3Y-yS-VTA"/>
                     </connections>
@@ -123,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="1002" y="346"/>
         </scene>
-        <!--Photo Detail View Controller-->
+        <!--Photo-->
         <scene sceneID="MiL-02-cO6">
             <objects>
                 <viewController id="Qwo-SA-Ag8" customClass="PhotoDetailViewController" sceneMemberID="viewController">
@@ -141,7 +186,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="r2e-IL-QfL"/>
+                    <navigationItem key="navigationItem" title="Photo" id="r2e-IL-QfL"/>
                     <connections>
                         <outlet property="photoImageView" destination="SYo-10-zYs" id="tAs-Ja-Rfj"/>
                     </connections>

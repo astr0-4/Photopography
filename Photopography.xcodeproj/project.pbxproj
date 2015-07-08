@@ -15,6 +15,7 @@
 		65ADCC001B4AD0510076B4AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65ADCBFF1B4AD0510076B4AE /* Images.xcassets */; };
 		65ADCC031B4AD0510076B4AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ADCC011B4AD0510076B4AE /* LaunchScreen.xib */; };
 		65ADCC0F1B4AD0510076B4AE /* PhotopographyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADCC0E1B4AD0510076B4AE /* PhotopographyTests.m */; };
+		65E05CD31B4D7529009D8C1B /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E05CD21B4D7529009D8C1B /* GraphViewController.m */; };
 		FA6018AF1B4B09CB00E1166C /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6018AA1B4B09CB00E1166C /* FlickrPhotoCell.m */; };
 		FA6018B11B4B09CB00E1166C /* FlickrPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6018AE1B4B09CB00E1166C /* FlickrPhotoViewController.m */; };
 		FA6018B31B4B138900E1166C /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FA6018B21B4B138900E1166C /* Location.gpx */; };
@@ -50,6 +51,8 @@
 		65ADCC081B4AD0510076B4AE /* PhotopographyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotopographyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ADCC0D1B4AD0510076B4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65ADCC0E1B4AD0510076B4AE /* PhotopographyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotopographyTests.m; sourceTree = "<group>"; };
+		65E05CD11B4D7529009D8C1B /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		65E05CD21B4D7529009D8C1B /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		AD2D9341B2A7AC96FBF08185 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6018A91B4B09CB00E1166C /* FlickrPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoCell.h; sourceTree = "<group>"; };
 		FA6018AA1B4B09CB00E1166C /* FlickrPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoCell.m; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				FA6018AE1B4B09CB00E1166C /* FlickrPhotoViewController.m */,
 				FA86C9251B4CA7C2008BA8AF /* PhotoDetailViewController.h */,
 				FA86C9261B4CA7C2008BA8AF /* PhotoDetailViewController.m */,
+				65E05CD11B4D7529009D8C1B /* GraphViewController.h */,
+				65E05CD21B4D7529009D8C1B /* GraphViewController.m */,
 				65ADCBFC1B4AD0510076B4AE /* Main.storyboard */,
 				FA86C90A1B4C3E22008BA8AF /* Photopography.xcdatamodeld */,
 				65ADCBFF1B4AD0510076B4AE /* Images.xcassets */,
@@ -317,6 +322,7 @@
 				FA6018B11B4B09CB00E1166C /* FlickrPhotoViewController.m in Sources */,
 				65ADCBFB1B4AD0510076B4AE /* ViewController.m in Sources */,
 				FA6018AF1B4B09CB00E1166C /* FlickrPhotoCell.m in Sources */,
+				65E05CD31B4D7529009D8C1B /* GraphViewController.m in Sources */,
 				FA86C9241B4C61AD008BA8AF /* Photo.m in Sources */,
 				FA86C90C1B4C3E22008BA8AF /* Photopography.xcdatamodeld in Sources */,
 				65ADCBF81B4AD0510076B4AE /* AppDelegate.m in Sources */,

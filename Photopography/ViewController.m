@@ -12,7 +12,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *requestCurrentLocationButton;
 
 @property (assign, nonatomic) INTULocationRequestID locationRequestID;
