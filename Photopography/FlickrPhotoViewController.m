@@ -51,8 +51,6 @@
     NSURL *url = [NSURL URLWithString:urlString];
     NSLog(@"url: %@ ", url);
     
-  //  NSLog(@"latitude: %f , longitude: %f", location.latitude, location.longitude);
-    
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSError *jsonError;
         NSDictionary *resultDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
@@ -262,10 +260,14 @@
 
 #pragma prepareForSegue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showPhotoDetail"]){
     PhotoDetailViewController *photoDetailViewController = (PhotoDetailViewController *)segue.destinationViewController;
     photoDetailViewController.managedObjectContext = self.managedObjectContext;
     NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
     photoDetailViewController.photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
+    
+    
 }
 
 
