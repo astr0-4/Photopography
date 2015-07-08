@@ -21,6 +21,6 @@
 @property (nonatomic, retain) NSString * photoTitle;
 @property (nonatomic, retain) NSString * photographer;
 @property (nonatomic, retain) NSDate * photoDate;
-@property (nonatomic, retain) Location *location;
+@property (nonatomic, retain) Location *userLocation;
 
 @end

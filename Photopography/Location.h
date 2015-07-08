@@ -13,8 +13,8 @@
 
 @interface Location : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * latitude;
-@property (nonatomic, retain) NSNumber * longitude;
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
 @property (nonatomic, retain) NSSet *photos;
 @end
 

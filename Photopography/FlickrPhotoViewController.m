@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @property (assign, nonatomic) INTULocationRequestID locationRequestID;
+
 @end
 
 @implementation FlickrPhotoViewController
@@ -25,8 +26,8 @@
 - (void)getPhotoDetails:(Photo *)photo {
     NSString *photoInfoString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=%@&photo_id=%@&format=json&nojsoncallback=1", API_KEY, photo.photoID];
     NSURL *photoInfoURL = [NSURL URLWithString:photoInfoString];
-    
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:photoInfoURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
         NSError *jsonError;
         NSDictionary *resultDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
         
@@ -38,7 +39,6 @@
             photo.photoLocation = [[photoInfo objectForKey:@"owner"] objectForKey:@"location"];
             NSString *dateString = [[photoInfo objectForKey:@"dates"] objectForKey:@"taken"];
             photo.photoDate = [self convertStringtoDateObject:dateString];
-
         });
     }];
     
@@ -46,12 +46,12 @@
 }
 
 - (void)loadPhotos {
-    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&has_geo=1&lat=%f&lon=%f&radius=0.1&format=json&nojsoncallback=1", API_KEY, self.latitude, self.longitude];
+    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&has_geo=1&lat=%f&lon=%f&radius=0.1&format=json&nojsoncallback=1", API_KEY, self.userLocation.latitude, self.userLocation.longitude];
     
     NSURL *url = [NSURL URLWithString:urlString];
     NSLog(@"url: %@ ", url);
     
-    NSLog(@"latitude: %f , longitude: %f", self.latitude, self.longitude);
+  //  NSLog(@"latitude: %f , longitude: %f", location.latitude, location.longitude);
     
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSError *jsonError;
@@ -71,6 +71,7 @@
                     photo.farm = [NSString stringWithFormat: @"%@", [flickrDict objectForKey:@"farm"]];
                     photo.secret = [flickrDict objectForKey:@"secret"];
                     photo.server = [flickrDict objectForKey:@"server"];
+                    photo.userLocation = self.userLocation;
 
                     [self getPhotoDetails:photo];
                 }
@@ -185,9 +186,11 @@
                               ^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
                                   
                                   if (status == INTULocationStatusSuccess) {
-                                      self.longitude = currentLocation.coordinate.longitude;
-                                      self.latitude = currentLocation.coordinate.latitude;
-                                      NSLog (@"coordinate 1: %f, coordinate 2: %f\n", self.longitude, self.latitude);
+                                      self.userLocation = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+                                      self.userLocation.latitude = currentLocation.coordinate.latitude;
+                                      self.userLocation.longitude = currentLocation.coordinate.longitude;
+                                      
+                                      NSLog (@"coordinate 1: %f, coordinate 2: %f\n", self.userLocation.longitude, self.userLocation.latitude);
                                       [self loadPhotos];
                                   }
                               }];

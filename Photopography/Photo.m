@@ -20,6 +20,6 @@
 @dynamic photoTitle;
 @dynamic photographer;
 @dynamic photoDate;
-@dynamic location;
+@dynamic userLocation;
 
 @end
