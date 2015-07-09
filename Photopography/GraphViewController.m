@@ -28,48 +28,65 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    
-    BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] init];
-    myGraph.delegate = self;
-    myGraph.dataSource = self;
-    
-    [self.view addSubview:myGraph];
+//    
+//    BEMSimpleLineGraphView *myGraph = [[BEMSimpleLineGraphView alloc] init];
+//    myGraph.delegate = self;
+//    myGraph.dataSource = self;
+//    
+//    self.graphView = myGraph;
+//    
+//    [self.view addSubview:myGraph];
     
     NSArray *firstDayOfMonthUNIX = @[@"1420070400", @"1422748800", @"1425168000", @"1427846400", @"1430438400", @"1433116800", @"1435708800", @"1438387200", @"1441065600", @"1443657600", @"1446336000", @"1448928000",];
     NSArray *lastDayOfMonthUNIX = @[@"1422748799", @"1425167999", @"1427846399", @"1430438399", @"1433116799", @"1435708799", @"1438387199", @"1441065599", @"1443657599", @"1446335999", @"1448927999", @"1451606399"];
     
     self.graphValuesArray = [[NSMutableArray alloc] init];
     
-    int i;
     
-    for (i = 0; i < 12; i++) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         
-        self.firstDay = firstDayOfMonthUNIX[i];
-        self.lastDay = lastDayOfMonthUNIX[i];
         
-        NSString *urlStringForDates = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&min_taken_date=%@&max_taken_date=%@&has_geo=1&lat=%f&lon=%f&radius=0.1&format=json&nojsoncallback=1", API_KEY, firstDayOfMonthUNIX[i], lastDayOfMonthUNIX[i], self.latitude, self.longitude];
+        NSMutableArray *graphValuesArray = [[NSMutableArray alloc] init];
         
-        NSURL *urlDates = [NSURL URLWithString:urlStringForDates];
-        NSLog(@"url: %@", urlDates);
+        for (int i = 0; i < 12; i++) {
+            
+            self.firstDay = firstDayOfMonthUNIX[i];
+            self.lastDay = lastDayOfMonthUNIX[i];
+            
+            NSString *urlStringForDates = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&min_taken_date=%@&max_taken_date=%@&has_geo=1&lat=%f&lon=%f&radius=0.1&format=json&nojsoncallback=1", API_KEY, firstDayOfMonthUNIX[i], lastDayOfMonthUNIX[i], self.latitude, self.longitude];
+            
+            NSURL *urlDates = [NSURL URLWithString:urlStringForDates];
+            NSLog(@"url: %@", urlDates);
+            
+            NSData *jsonData = [NSData dataWithContentsOfURL:urlDates];
+            
+            NSError *error = nil;
+            
+            NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+            
+            NSDictionary *photosDict = [dataDictionary objectForKey:@"photos"];
+            
+            NSString *totalString = [photosDict objectForKey:@"total"];
+            
+            NSLog(@"total: %@", totalString);
+            
+            [graphValuesArray addObject:totalString];
+            
+            // Number of points in the graph.
+            //NSLog (@"count: %lu", (unsigned long)self.graphValuesArray.count);
+            //NSLog (@"total from array: %@", self.graphValuesArray[i]);
+            
+            
+        }
         
-        NSData *jsonData = [NSData dataWithContentsOfURL:urlDates];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"updating graph");
+            self.graphValuesArray = graphValuesArray;
+            [self.graphView reloadGraph];
+        });
         
-        NSError *error = nil;
-        
-        NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-        
-        NSDictionary *photosDict = [dataDictionary objectForKey:@"photos"];
-        
-        NSString *totalString = [photosDict objectForKey:@"total"];
-        
-        NSLog(@"total: %@", totalString);
-        
-        [self.graphValuesArray addObject:totalString];
-        
-        // Number of points in the graph.
-        NSLog (@"count: %lu", (unsigned long)self.graphValuesArray.count);
-        NSLog (@"total from array: %@", self.graphValuesArray[i]);
-    }
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,6 +107,10 @@
     self.datesArray = [[NSArray alloc] initWithObjects:@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec", nil];
     if ((index % 2) == 1) return [self.datesArray objectAtIndex:index];
     else return @"";
+}
+
+- (NSString *)noDataLabelTextForLineGraph:(BEMSimpleLineGraphView *)graph {
+    return @"Loading data...";
 }
 
 /*

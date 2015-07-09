@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwI-H7-E3t">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwI-H7-E3t">
                                 <rect key="frame" x="87" y="514" width="146" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <state key="normal" title="I'm Feeling Lucky!">
@@ -28,14 +28,14 @@
                                     <segue destination="FPg-zl-Jzb" kind="push" identifier="feelingLucky" id="BE5-5w-9Ar"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Geogram uses your phone's location to find photos that were taken near you" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-pB-yUs">
-                                <rect key="frame" x="62" y="119" width="196" height="185"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geogram uses your phone's location to find photos that were taken near you" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-pB-yUs">
+                                <rect key="frame" x="62" y="159" width="196" height="144"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <color key="textColor" red="0.91498154401779175" green="0.37833490967750549" blue="0.73496383428573608" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jY-kW-siO">
-                                <rect key="frame" x="96" y="465" width="128" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jY-kW-siO">
+                                <rect key="frame" x="96" y="464" width="128" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <state key="normal" title="Find photos">
                                     <color key="titleColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,12 +48,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rUi-pB-yUs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="46" id="4hj-Cy-SLx"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UwI-H7-E3t" secondAttribute="bottom" constant="20" id="5nC-vA-iE3"/>
                             <constraint firstItem="UwI-H7-E3t" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="71" id="IaI-65-Nr6"/>
                             <constraint firstItem="3jY-kW-siO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="80" id="Jql-Hc-gC7"/>
                             <constraint firstItem="UwI-H7-E3t" firstAttribute="top" secondItem="3jY-kW-siO" secondAttribute="bottom" constant="8" id="LBh-Ei-y4b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UwI-H7-E3t" secondAttribute="trailing" constant="71" id="Uvg-eT-ffX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rUi-pB-yUs" secondAttribute="trailing" constant="46" id="cfy-yV-cN5"/>
+                            <constraint firstItem="3jY-kW-siO" firstAttribute="top" secondItem="rUi-pB-yUs" secondAttribute="bottom" constant="161" id="gPP-wY-OHB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3jY-kW-siO" secondAttribute="trailing" constant="80" id="hkE-G6-fXh"/>
+                            <constraint firstItem="rUi-pB-yUs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="95" id="o4w-Wv-azH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Geogram" id="LOS-D4-xrp"/>
@@ -78,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-gW-TVa" customClass="BEMSimpleLineGraphView">
-                                <rect key="frame" x="0.0" y="84" width="304" height="464"/>
+                                <rect key="frame" x="16" y="72" width="288" height="476"/>
                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
@@ -115,13 +119,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Rrj-ZO-x4j" firstAttribute="top" secondItem="Yl5-gW-TVa" secondAttribute="bottom" constant="20" id="0Q5-C4-gDd"/>
-                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="leading" secondItem="fjO-Md-qGA" secondAttribute="leading" id="SNC-Br-QVl"/>
-                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="top" secondItem="V6U-MB-2Oa" secondAttribute="bottom" constant="20" id="UB3-ZB-19p"/>
-                            <constraint firstAttribute="trailing" secondItem="Yl5-gW-TVa" secondAttribute="trailing" constant="16" id="rrp-Jx-xBN"/>
+                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="leading" secondItem="fjO-Md-qGA" secondAttribute="leadingMargin" id="VS3-df-GUm"/>
+                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="trailing" secondItem="fjO-Md-qGA" secondAttribute="trailingMargin" id="Ypi-FY-oUf"/>
+                            <constraint firstItem="Rrj-ZO-x4j" firstAttribute="top" secondItem="Yl5-gW-TVa" secondAttribute="bottom" constant="20" id="aED-AL-9Un"/>
+                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="top" secondItem="V6U-MB-2Oa" secondAttribute="bottom" constant="8" id="mhr-b2-Cie"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="Re3-7b-tQw"/>
+                    <connections>
+                        <outlet property="graphView" destination="Yl5-gW-TVa" id="wd2-Sm-JbY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUH-yw-lBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GmW-qh-R5T">
-                            <size key="itemSize" width="287" height="364"/>
+                            <size key="itemSize" width="275" height="275"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -146,20 +153,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="364"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zjy-Ky-5nm">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="364"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" id="HQR-gO-JeG"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="KKL-uy-42g"/>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" id="cy7-Ll-BWl"/>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="lkr-HW-3Wb"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="58B-lo-cBM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" id="DjT-sh-JTo"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" id="FAi-ub-zyH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="SmJ-bY-F4o"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="photoImageView" destination="Zjy-Ky-5nm" id="quk-uX-abU"/>
