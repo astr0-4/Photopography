@@ -16,5 +16,6 @@
 @property (strong, nonatomic) Photo *photo;
 @property (strong, nonatomic) Location *location;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

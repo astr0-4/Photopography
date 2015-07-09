@@ -22,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.scrollView.minimumZoomScale = 0.25;
+    self.scrollView.maximumZoomScale = 5.0;
+    self.scrollView.contentSize = self.photoImageView.frame.size;
+    self.scrollView.delegate = self;
+    
      self.photoTitleLabel.text= self.photo.photoTitle;
     self.photoLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.photo.photoCity, self.photo.photoCountry];
     [self loadPhoto];
@@ -57,6 +63,15 @@
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Check out my photo!",[self photoURL]] applicationActivities:nil];
     [self presentViewController:activityViewController animated:YES completion:nil];
     // UIImageWriteToSavedPhotosAlbum(self.photoImage, nil, nil, nil);
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.photoImageView;
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
+{
 }
 
                                                         
