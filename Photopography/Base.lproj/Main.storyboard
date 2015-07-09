@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Geogram-->
@@ -55,6 +54,67 @@
             </objects>
             <point key="canvasLocation" x="587" y="346"/>
         </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="XOq-RR-d83">
+            <objects>
+                <viewController id="d4z-3I-l4O" customClass="GraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f5H-1z-PfF"/>
+                        <viewControllerLayoutGuide type="bottom" id="apd-QT-Q5K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yfl-9A-bgj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zat-Ec-4pD" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="38" y="72" width="255" height="468"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableYAxisLabel" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableXAxisLabel" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
+                                        <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
+                                        <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorLine">
+                                        <color key="value" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorPoint">
+                                        <color key="value" red="0.91498154399999998" green="0.3783349097" blue="0.73496383430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="widthLine">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sizePoint">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorXaxisLabel">
+                                        <color key="value" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorYaxisLabel">
+                                        <color key="value" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="d4z-3I-l4O" id="Jgm-iN-Do6"/>
+                                    <outlet property="delegate" destination="d4z-3I-l4O" id="Zye-Yd-rp7"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RRO-GD-aeT"/>
+                    <connections>
+                        <outlet property="graphView" destination="Zat-Ec-4pD" id="Y0T-Go-X3v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Njs-in-WCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="-277"/>
+        </scene>
         <!--Flickr Photo View Controller-->
         <scene sceneID="R8a-yP-24x">
             <objects>
@@ -78,49 +138,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zjy-Ky-5nm">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="326"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="364"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Flickr Account Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-c8-GSr">
-                                            <rect key="frame" x="0.0" y="347" width="287" height="17"/>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="U8p-aa-Yvp"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                            <size key="shadowOffset" width="0.0" height="0.0"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Flickr Photo Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-kT-deU">
-                                            <rect key="frame" x="0.0" y="327" width="287" height="20"/>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="O6q-o1-sEH"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                            <size key="shadowOffset" width="0.0" height="0.0"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="3nS-kT-deU" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="J07-xZ-7nO"/>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" id="OqK-75-lpZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="3nS-kT-deU" secondAttribute="trailing" id="RDk-9q-mNc"/>
-                                    <constraint firstAttribute="trailing" secondItem="1oe-c8-GSr" secondAttribute="trailing" id="Rc4-Jn-DBI"/>
-                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="Ydg-6d-dGG"/>
-                                    <constraint firstAttribute="bottom" secondItem="1oe-c8-GSr" secondAttribute="bottom" id="con-Ic-3YF"/>
-                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="fKD-Rh-9IL"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="vTS-Fo-0tv"/>
-                                    <constraint firstItem="1oe-c8-GSr" firstAttribute="top" secondItem="3nS-kT-deU" secondAttribute="bottom" id="wWb-97-yHm"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" constant="30" id="xX9-BP-O2m"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="top" secondItem="qNF-x2-bGx" secondAttribute="top" id="5X5-Dp-i7x"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" id="DJw-L5-ads"/>
+                                    <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="Xlr-sj-MVh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="i4b-x5-t90"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="photoImageView" destination="Zjy-Ky-5nm" id="quk-uX-abU"/>
-                                    <outlet property="photographerLabel" destination="1oe-c8-GSr" id="dHs-7t-ft0"/>
-                                    <outlet property="titleLabel" destination="3nS-kT-deU" id="Liy-7l-FHm"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -129,7 +159,14 @@
                             <outlet property="delegate" destination="FPg-zl-Jzb" id="AYP-GP-67D"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="maK-sU-eZF"/>
+                    <navigationItem key="navigationItem" id="maK-sU-eZF">
+                        <barButtonItem key="rightBarButtonItem" title="Graph" id="i0E-Lg-NBz">
+                            <color key="tintColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="d4z-3I-l4O" kind="push" id="Su7-Nr-RaO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Qwo-SA-Ag8" kind="push" identifier="showPhotoDetail" id="o3Y-yS-VTA"/>
                     </connections>

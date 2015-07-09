@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1B9722DC7FDDE22624703CAF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2D9341B2A7AC96FBF08185 /* libPods.a */; };
+		652CAE5A1B4EFDDE000C219C /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652CAE591B4EFDDE000C219C /* GraphViewController.m */; };
+		652CAE5D1B4EFE10000C219C /* Total.m in Sources */ = {isa = PBXBuildFile; fileRef = 652CAE5C1B4EFE10000C219C /* Total.m */; };
 		65ADCBF51B4AD0510076B4AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADCBF41B4AD0510076B4AE /* main.m */; };
 		65ADCBF81B4AD0510076B4AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADCBF71B4AD0510076B4AE /* AppDelegate.m */; };
 		65ADCBFB1B4AD0510076B4AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ADCBFA1B4AD0510076B4AE /* ViewController.m */; };
@@ -38,6 +40,10 @@
 		5C9442CB0B423C6E382F9854 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		63D8AD069F2B97CEB1F04CFA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		652CAE571B4EF32B000C219C /* APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIKey.h; sourceTree = "<group>"; };
+		652CAE581B4EFDDE000C219C /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		652CAE591B4EFDDE000C219C /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		652CAE5B1B4EFE10000C219C /* Total.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Total.h; sourceTree = "<group>"; };
+		652CAE5C1B4EFE10000C219C /* Total.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Total.m; sourceTree = "<group>"; };
 		65ADCBEF1B4AD0510076B4AE /* Photopography.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photopography.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ADCBF31B4AD0510076B4AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65ADCBF41B4AD0510076B4AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -124,6 +130,10 @@
 				FA6018AE1B4B09CB00E1166C /* FlickrPhotoViewController.m */,
 				FA86C9251B4CA7C2008BA8AF /* PhotoDetailViewController.h */,
 				FA86C9261B4CA7C2008BA8AF /* PhotoDetailViewController.m */,
+				652CAE581B4EFDDE000C219C /* GraphViewController.h */,
+				652CAE591B4EFDDE000C219C /* GraphViewController.m */,
+				652CAE5B1B4EFE10000C219C /* Total.h */,
+				652CAE5C1B4EFE10000C219C /* Total.m */,
 				65ADCBFC1B4AD0510076B4AE /* Main.storyboard */,
 				FA86C90A1B4C3E22008BA8AF /* Photopography.xcdatamodeld */,
 				65ADCBFF1B4AD0510076B4AE /* Images.xcassets */,
@@ -315,8 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6018B11B4B09CB00E1166C /* FlickrPhotoViewController.m in Sources */,
+				652CAE5D1B4EFE10000C219C /* Total.m in Sources */,
 				65ADCBFB1B4AD0510076B4AE /* ViewController.m in Sources */,
 				FA6018AF1B4B09CB00E1166C /* FlickrPhotoCell.m in Sources */,
+				652CAE5A1B4EFDDE000C219C /* GraphViewController.m in Sources */,
 				FADACE441B4EC92800ED07FC /* Photo.m in Sources */,
 				FA86C90C1B4C3E22008BA8AF /* Photopography.xcdatamodeld in Sources */,
 				65ADCBF81B4AD0510076B4AE /* AppDelegate.m in Sources */,
