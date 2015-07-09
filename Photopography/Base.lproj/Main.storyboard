@@ -17,8 +17,12 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwI-H7-E3t">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwI-H7-E3t">
                                 <rect key="frame" x="87" y="514" width="146" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="kJm-6m-Blj"/>
+                                    <constraint firstAttribute="width" constant="146" id="oJS-Nf-8lf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <state key="normal" title="I'm Feeling Lucky!">
                                     <color key="titleColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
@@ -28,14 +32,12 @@
                                     <segue destination="FPg-zl-Jzb" kind="push" identifier="feelingLucky" id="BE5-5w-9Ar"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geogram uses your phone's location to find photos that were taken near you" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-pB-yUs">
-                                <rect key="frame" x="62" y="159" width="196" height="144"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <color key="textColor" red="0.91498154401779175" green="0.37833490967750549" blue="0.73496383428573608" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jY-kW-siO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jY-kW-siO">
                                 <rect key="frame" x="96" y="464" width="128" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="58l-GE-zPQ"/>
+                                    <constraint firstAttribute="height" constant="41" id="yLE-pA-3zL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <state key="normal" title="Find photos">
                                     <color key="titleColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,19 +47,28 @@
                                     <segue destination="FPg-zl-Jzb" kind="push" identifier="showPhotos" id="Q5w-wZ-EIi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geogram uses your phone's location to find photos that were taken near you" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-pB-yUs">
+                                <rect key="frame" x="73" y="142" width="175" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="Sr2-lu-b0q"/>
+                                    <constraint firstAttribute="width" constant="175" id="aFa-C1-tPk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <color key="textColor" red="0.91498154401779175" green="0.37833490967750549" blue="0.73496383428573608" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rUi-pB-yUs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="46" id="4hj-Cy-SLx"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UwI-H7-E3t" secondAttribute="bottom" constant="20" id="5nC-vA-iE3"/>
-                            <constraint firstItem="UwI-H7-E3t" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="71" id="IaI-65-Nr6"/>
-                            <constraint firstItem="3jY-kW-siO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="80" id="Jql-Hc-gC7"/>
-                            <constraint firstItem="UwI-H7-E3t" firstAttribute="top" secondItem="3jY-kW-siO" secondAttribute="bottom" constant="8" id="LBh-Ei-y4b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UwI-H7-E3t" secondAttribute="trailing" constant="71" id="Uvg-eT-ffX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rUi-pB-yUs" secondAttribute="trailing" constant="46" id="cfy-yV-cN5"/>
-                            <constraint firstItem="3jY-kW-siO" firstAttribute="top" secondItem="rUi-pB-yUs" secondAttribute="bottom" constant="161" id="gPP-wY-OHB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3jY-kW-siO" secondAttribute="trailing" constant="80" id="hkE-G6-fXh"/>
-                            <constraint firstItem="rUi-pB-yUs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="95" id="o4w-Wv-azH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UwI-H7-E3t" secondAttribute="bottom" constant="20" id="1bi-Q4-W1U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rUi-pB-yUs" secondAttribute="trailing" constant="56" id="4cW-xQ-nUj"/>
+                            <constraint firstItem="UwI-H7-E3t" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="71" id="Amg-SN-Wkh"/>
+                            <constraint firstItem="UwI-H7-E3t" firstAttribute="top" secondItem="3jY-kW-siO" secondAttribute="bottom" constant="9" id="FYt-us-Ucg"/>
+                            <constraint firstItem="rUi-pB-yUs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="57" id="KcY-d4-8aW"/>
+                            <constraint firstItem="3jY-kW-siO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="80" id="VkZ-Gd-rCl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UwI-H7-E3t" secondAttribute="trailing" constant="71" id="XyQ-rg-FOH"/>
+                            <constraint firstItem="rUi-pB-yUs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="78" id="aPG-Ie-aIh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3jY-kW-siO" secondAttribute="trailing" constant="80" id="qu3-JO-oOf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Geogram" id="LOS-D4-xrp"/>
