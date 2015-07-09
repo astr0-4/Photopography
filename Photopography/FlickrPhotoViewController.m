@@ -127,7 +127,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadPhotos];
-   // [self addLocation];
 }
 
 - (void)didReceiveMemoryWarning {
