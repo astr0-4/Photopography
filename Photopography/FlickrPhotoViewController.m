@@ -267,7 +267,7 @@
             GraphViewController *graphViewController = (GraphViewController *)segue.destinationViewController;
             graphViewController.longitude = self.longitude;
             graphViewController.latitude = self.latitude;
-        }
+    }
 }
 
 

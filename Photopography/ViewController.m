@@ -57,6 +57,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(CLLocation *)getRandomLocation{
     self.locations = [[NSMutableArray alloc] init];
     
@@ -113,13 +114,17 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     if([segue.identifier isEqualToString:@"showPhotos"]){
+        
     FlickrPhotoViewController *destinationViewController = (FlickrPhotoViewController *)segue.destinationViewController;
     destinationViewController.managedObjectContext = self.managedObjectContext;
         destinationViewController.latitude = self.latitude;
         destinationViewController.longitude = self.longitude;
     }
+    
     if([segue.identifier isEqualToString:@"feelingLucky"]) {
+        
         FlickrPhotoViewController *destinationViewController = (FlickrPhotoViewController *)segue.destinationViewController;
         destinationViewController.managedObjectContext = self.managedObjectContext;
         

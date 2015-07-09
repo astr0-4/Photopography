@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Geogram-->
@@ -67,12 +68,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zat-Ec-4pD" customClass="BEMSimpleLineGraphView">
-                                <rect key="frame" x="38" y="72" width="255" height="468"/>
+                                <rect key="frame" x="16" y="84" width="288" height="464"/>
                                 <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableYAxisLabel" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableXAxisLabel" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="NO"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
                                         <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
@@ -105,6 +106,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zat-Ec-4pD" firstAttribute="trailing" secondItem="yfl-9A-bgj" secondAttribute="trailingMargin" id="U9O-sW-0Ap"/>
+                            <constraint firstItem="apd-QT-Q5K" firstAttribute="top" secondItem="Zat-Ec-4pD" secondAttribute="bottom" constant="20" id="Wdu-Dc-M5L"/>
+                            <constraint firstItem="Zat-Ec-4pD" firstAttribute="leading" secondItem="yfl-9A-bgj" secondAttribute="leadingMargin" id="fyf-HY-hjL"/>
+                            <constraint firstItem="Zat-Ec-4pD" firstAttribute="top" secondItem="f5H-1z-PfF" secondAttribute="bottom" constant="20" id="hzi-Jl-TlG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RRO-GD-aeT"/>
                     <connections>
@@ -163,7 +170,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Graph" id="i0E-Lg-NBz">
                             <color key="tintColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="d4z-3I-l4O" kind="push" id="Su7-Nr-RaO"/>
+                                <segue destination="d4z-3I-l4O" kind="push" identifier="showGraph" id="Su7-Nr-RaO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -199,37 +206,38 @@
                                     <constraint firstItem="SYo-10-zYs" firstAttribute="top" secondItem="9iV-bB-mf6" secondAttribute="top" id="ITU-hf-Fre"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-BU-coa">
-                                <rect key="frame" x="0.0" y="526" width="320" height="21"/>
-                                <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-Bq-Lhk">
+                                <rect key="frame" x="0.0" y="553" width="320" height="15"/>
+                                <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="vss-VD-Qn8"/>
+                                    <constraint firstAttribute="height" constant="15" id="cF4-Z8-bmz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-Bq-Lhk">
-                                <rect key="frame" x="0.0" y="547" width="320" height="21"/>
-                                <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-BU-coa">
+                                <rect key="frame" x="0.0" y="536" width="320" height="17"/>
+                                <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="aCM-w0-DXt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="1JZ-fX-VvT"/>
+                                    <constraint firstAttribute="height" constant="17" id="flE-bl-mdT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Oae-BU-coa" secondAttribute="trailing" id="A2K-Xv-iHR"/>
+                            <constraint firstItem="fO3-Bq-Lhk" firstAttribute="leading" secondItem="nUI-29-5YY" secondAttribute="leading" id="39Q-2k-v4B"/>
+                            <constraint firstAttribute="trailing" secondItem="fO3-Bq-Lhk" secondAttribute="trailing" id="8wR-nI-MZe"/>
                             <constraint firstItem="9iV-bB-mf6" firstAttribute="leading" secondItem="nUI-29-5YY" secondAttribute="leading" id="BBm-Bg-8fb"/>
-                            <constraint firstItem="fO3-Bq-Lhk" firstAttribute="top" secondItem="Oae-BU-coa" secondAttribute="bottom" id="Fcr-3r-9wl"/>
-                            <constraint firstAttribute="trailing" secondItem="fO3-Bq-Lhk" secondAttribute="trailing" id="Ruz-pV-qjx"/>
-                            <constraint firstItem="Oae-BU-coa" firstAttribute="leading" secondItem="nUI-29-5YY" secondAttribute="leading" id="SoS-7x-88g"/>
+                            <constraint firstItem="fO3-Bq-Lhk" firstAttribute="top" secondItem="Oae-BU-coa" secondAttribute="bottom" id="ESp-pO-0F0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oae-BU-coa" secondAttribute="trailing" constant="-16" id="MIZ-as-Zoh"/>
                             <constraint firstItem="9iV-bB-mf6" firstAttribute="top" secondItem="0PI-bQ-IGx" secondAttribute="bottom" id="Zk7-H5-0H5"/>
-                            <constraint firstItem="fO3-Bq-Lhk" firstAttribute="leading" secondItem="nUI-29-5YY" secondAttribute="leading" id="dkX-sE-DfB"/>
-                            <constraint firstItem="u2L-h3-7cz" firstAttribute="top" secondItem="fO3-Bq-Lhk" secondAttribute="bottom" id="dso-pH-Sln"/>
+                            <constraint firstItem="u2L-h3-7cz" firstAttribute="top" secondItem="fO3-Bq-Lhk" secondAttribute="bottom" id="Zt1-n7-bD8"/>
+                            <constraint firstItem="Oae-BU-coa" firstAttribute="leading" secondItem="nUI-29-5YY" secondAttribute="leadingMargin" constant="-16" id="bTw-RH-0hC"/>
                             <constraint firstItem="u2L-h3-7cz" firstAttribute="top" secondItem="9iV-bB-mf6" secondAttribute="bottom" id="lPe-ks-iwG"/>
                             <constraint firstAttribute="trailing" secondItem="9iV-bB-mf6" secondAttribute="trailing" id="yTq-gS-mvo"/>
                         </constraints>

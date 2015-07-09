@@ -85,8 +85,8 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference
-         identifier = "../Photopography/Location.gpx"
-         referenceType = "0">
+         identifier = "Tokyo, Japan"
+         referenceType = "1">
       </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction

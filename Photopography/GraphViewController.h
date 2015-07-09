@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic) NSString *firstDay;
 @property (strong, nonatomic) NSString *lastDay;
+
 @property (nonatomic) CLLocationDegrees longitude;
 @property (nonatomic) CLLocationDegrees latitude;
 
