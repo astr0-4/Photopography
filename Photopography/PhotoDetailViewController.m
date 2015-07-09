@@ -60,7 +60,7 @@
 
 
 - (IBAction)saveButtonPressed:(id)sender {
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Check out my photo!",[self photoURL]] applicationActivities:nil];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Check out the photo I found on Flickr!!",[self photoURL]] applicationActivities:nil];
     [self presentViewController:activityViewController animated:YES completion:nil];
     // UIImageWriteToSavedPhotosAlbum(self.photoImage, nil, nil, nil);
 }
