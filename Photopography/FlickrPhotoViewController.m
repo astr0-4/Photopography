@@ -1,6 +1,6 @@
 //
 //  FlickrPhotoViewController.m
-//  
+//
 //
 //  Created by Alex on 2015-07-04.
 //
@@ -61,7 +61,7 @@
         if(!photosDict) {
             NSLog(@"there was an error! %@", error);
         } else {
-
+            
             // change core data to background thread later!!!!
             dispatch_async(dispatch_get_main_queue(), ^{
                 Location *location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
@@ -75,7 +75,7 @@
                     photo.secret = [flickrDict objectForKey:@"secret"];
                     photo.server = [flickrDict objectForKey:@"server"];
                     photo.userLocation = location;
-
+                    
                     [self getPhotoDetails:photo];
                     
                 }
@@ -96,13 +96,13 @@
     }
     return photo;
     
-//    NSError *error = nil;
-//    if (![self.managedObjectContext save:&error]) {
-//        // Replace this implementation with code to handle the error appropriately.
-//        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-//        abort();
-//    }
+    //    NSError *error = nil;
+    //    if (![self.managedObjectContext save:&error]) {
+    //        // Replace this implementation with code to handle the error appropriately.
+    //        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+    //        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+    //        abort();
+    //    }
 }
 
 //-(void)addLocation {
@@ -135,14 +135,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -188,9 +187,9 @@
 -(void)configurePhotoDetails:(NSIndexPath *)indexPath forCell:(FlickrPhotoCell *)cell {
     
     Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
-  
-        cell.photographerLabel.text = photo.photographer;
-        cell.titleLabel.text = photo.photoTitle;
+    
+    cell.photographerLabel.text = photo.photographer;
+    cell.titleLabel.text = photo.photoTitle;
 }
 
 
@@ -220,7 +219,7 @@
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"photoDate" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     [fetchRequest setSortDescriptors:sortDescriptors];
-       // Initialize Fetched Results Controller
+    // Initialize Fetched Results Controller
     const float rangeValue = 0.0005;
     NSNumber *minLatitude = [NSNumber numberWithDouble:(self.latitude - rangeValue)];
     NSNumber *maxLatitude = [NSNumber numberWithDouble:(self.latitude + rangeValue)];
@@ -272,12 +271,12 @@
 #pragma prepareForSegue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showPhotoDetail"]){
-    PhotoDetailViewController *photoDetailViewController = (PhotoDetailViewController *)segue.destinationViewController;
-    photoDetailViewController.managedObjectContext = self.managedObjectContext;
-    NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
-    photoDetailViewController.photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        PhotoDetailViewController *photoDetailViewController = (PhotoDetailViewController *)segue.destinationViewController;
+        photoDetailViewController.managedObjectContext = self.managedObjectContext;
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
+        photoDetailViewController.photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
         photoDetailViewController.location = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
+        
     }
 }
 

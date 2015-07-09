@@ -118,7 +118,6 @@
                                     <constraint firstAttribute="bottomMargin" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" constant="30" id="xX9-BP-O2m"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="dateLabel" destination="Pta-4O-G1s" id="09i-7k-rgw"/>
                                     <outlet property="photoImageView" destination="Zjy-Ky-5nm" id="quk-uX-abU"/>
                                     <outlet property="photographerLabel" destination="1oe-c8-GSr" id="dHs-7t-ft0"/>
                                     <outlet property="titleLabel" destination="3nS-kT-deU" id="Liy-7l-FHm"/>
