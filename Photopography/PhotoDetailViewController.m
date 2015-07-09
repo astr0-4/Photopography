@@ -46,8 +46,19 @@
     [task resume];
 }
 
-- (IBAction)saveButtonPressed:(id)sender {
-     UIImageWriteToSavedPhotosAlbum(self.photoImage, nil, nil, nil);
+-(NSURL *)photoURL {
+    NSString *imageString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_b.jpg", self.photo.farm, self.photo.server, self.photo.photoID, self.photo.secret];
+    NSURL *imageURL = [NSURL URLWithString:imageString];
+    return imageURL;
 }
 
+
+- (IBAction)saveButtonPressed:(id)sender {
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[@"Check out my photo!",[self photoURL]] applicationActivities:nil];
+    [self presentViewController:activityViewController animated:YES completion:nil];
+    // UIImageWriteToSavedPhotosAlbum(self.photoImage, nil, nil, nil);
+}
+
+                                                        
+                                                        
 @end

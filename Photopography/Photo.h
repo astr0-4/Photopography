@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <UIKit/UIKit.h>
 
 @class Location;
 
@@ -23,5 +24,6 @@
 @property (nonatomic, retain) NSString * server;
 @property (nonatomic, retain) NSString * photoCity;
 @property (nonatomic, retain) Location *userLocation;
+@property (nonatomic, strong) UIImage *photoImage;
 
 @end

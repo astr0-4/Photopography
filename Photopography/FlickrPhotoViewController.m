@@ -14,6 +14,7 @@
 
 @interface FlickrPhotoViewController () <NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic) BOOL isLoading;
 
 //@property (assign, nonatomic) INTULocationRequestID locationRequestID;
 
@@ -40,6 +41,7 @@
             photo.photoCountry = [[[photoInfo objectForKey:@"location"] objectForKey:@"country"] objectForKey:@"_content"];
             NSString *dateString = [[photoInfo objectForKey:@"dates"] objectForKey:@"taken"];
             photo.photoDate = [self convertStringtoDateObject:dateString];
+            [self.collectionView reloadData];
         });
     }];
     
@@ -47,6 +49,7 @@
 }
 
 - (void)loadPhotos {
+    self.isLoading = YES;
     NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&has_geo=1&lat=%f&lon=%f&radius=0.1&format=json&nojsoncallback=1", API_KEY, self.latitude, self.longitude];
     
     NSURL *url = [NSURL URLWithString:urlString];
@@ -79,7 +82,8 @@
                     [self getPhotoDetails:photo];
                     
                 }
-                
+                self.isLoading = NO;
+                [self.collectionView reloadData];
             });
         }
     }];
@@ -125,6 +129,7 @@
 
 
 - (void)viewDidLoad {
+    self.isLoading = NO;
     [super viewDidLoad];
     [self loadPhotos];
 }
@@ -168,20 +173,30 @@
 #pragma mark getPhotoImages and getPhotoDetails
 
 -(void)getAndConfigurePhotoImage:(NSIndexPath *)indexPath forCell:(FlickrPhotoCell *)cell {
-    [cell.photoTask cancel];
-    cell.photoImageView.image = nil;
+    
     Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSString *imageString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_b.jpg", photo.farm, photo.server, photo.photoID, photo.secret];
-    NSURL *imageURL = [NSURL URLWithString:imageString];
-    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:imageURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    
+    if (!photo.photoImage) {
+        [cell.photoTask cancel];
         
-        UIImage *myImage = [[UIImage alloc] initWithData:data];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            cell.photoImageView.image = myImage;
-        });
-    }];
-    cell.photoTask = task;
-    [task resume];
+        cell.photoImageView.image = nil;
+    
+        NSString *imageString = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@_b.jpg", photo.farm, photo.server, photo.photoID, photo.secret];
+        NSURL *imageURL = [NSURL URLWithString:imageString];
+        NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:imageURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            
+            UIImage *myImage = [[UIImage alloc] initWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                photo.photoImage = myImage;
+                cell.photoImageView.image = myImage;
+            });
+        }];
+        cell.photoTask = task;
+        [task resume];
+    }
+    else {
+        cell.photoImageView.image = photo.photoImage;
+    }
 }
 
 -(void)configurePhotoDetails:(NSIndexPath *)indexPath forCell:(FlickrPhotoCell *)cell {
@@ -248,7 +263,9 @@
 #pragma mark NSFetchedResultsControllerDelegate
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    [self.collectionView reloadData];
+    if(!self.isLoading) {
+    //[self.collectionView reloadData];
+    }
 }
 
 #pragma mark dateFormatter

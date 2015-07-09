@@ -23,4 +23,5 @@
 @dynamic photoCity;
 @dynamic userLocation;
 
+
 @end

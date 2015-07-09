@@ -63,7 +63,7 @@
     //alloc and init all the locations for the array
     CLLocation *newYork =[[CLLocation alloc] initWithLatitude:40.712784 longitude:-74.005941];
     [self.locations addObject:newYork];
-    CLLocation *vancouver = [[CLLocation alloc] initWithLatitude:49.282729 longitude:-123.120738];
+    CLLocation *vancouver = [[CLLocation alloc] initWithLatitude:49.2751079 longitude:-123.0986454];
     [self.locations addObject:vancouver];
     CLLocation *moscow = [[CLLocation alloc] initWithLatitude:55.755826 longitude:37.617300];
     [self.locations addObject:moscow];
