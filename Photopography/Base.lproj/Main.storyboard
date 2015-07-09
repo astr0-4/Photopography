@@ -78,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-gW-TVa" customClass="BEMSimpleLineGraphView">
-                                <rect key="frame" x="16" y="84" width="288" height="464"/>
+                                <rect key="frame" x="0.0" y="84" width="304" height="464"/>
                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
@@ -115,10 +115,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="leading" secondItem="fjO-Md-qGA" secondAttribute="leadingMargin" id="4ed-GV-rER"/>
-                            <constraint firstItem="Rrj-ZO-x4j" firstAttribute="top" secondItem="Yl5-gW-TVa" secondAttribute="bottom" constant="20" id="9EX-xr-4SW"/>
-                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="trailing" secondItem="fjO-Md-qGA" secondAttribute="trailingMargin" id="XQ9-X0-i3g"/>
-                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="top" secondItem="V6U-MB-2Oa" secondAttribute="bottom" constant="20" id="qG0-Cg-b7J"/>
+                            <constraint firstItem="Rrj-ZO-x4j" firstAttribute="top" secondItem="Yl5-gW-TVa" secondAttribute="bottom" constant="20" id="0Q5-C4-gDd"/>
+                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="leading" secondItem="fjO-Md-qGA" secondAttribute="leading" id="SNC-Br-QVl"/>
+                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="top" secondItem="V6U-MB-2Oa" secondAttribute="bottom" constant="20" id="UB3-ZB-19p"/>
+                            <constraint firstAttribute="trailing" secondItem="Yl5-gW-TVa" secondAttribute="trailing" constant="16" id="rrp-Jx-xBN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Graph" id="Re3-7b-tQw"/>
