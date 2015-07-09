@@ -7,7 +7,7 @@
 //
 
 #import "FlickrPhotoViewController.h"
-#import "APIKey.h"
+#include "APIKey.h"
 #import "FlickrPhotoCell.h"
 
 
@@ -15,7 +15,7 @@
 @interface FlickrPhotoViewController () <NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
-@property (assign, nonatomic) INTULocationRequestID locationRequestID;
+//@property (assign, nonatomic) INTULocationRequestID locationRequestID;
 
 @end
 
@@ -46,7 +46,7 @@
 }
 
 - (void)loadPhotos {
-    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&has_geo=1&lat=%f&lon=%f&radius=0.1&format=json&nojsoncallback=1", API_KEY, self.userLocation.latitude, self.userLocation.longitude];
+    NSString *urlString = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&has_geo=1&lat=%f&lon=%f&radius=0.1&format=json&nojsoncallback=1", API_KEY, self.latitude, self.longitude];
     
     NSURL *url = [NSURL URLWithString:urlString];
     NSLog(@"url: %@ ", url);
@@ -63,15 +63,20 @@
 
             // change core data to background thread later!!!!
             dispatch_async(dispatch_get_main_queue(), ^{
+                Location *location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+                location.latitude = self.latitude;
+                location.longitude = self.longitude;
+                
                 for(NSDictionary *flickrDict in photosArray) {
                     
                     Photo *photo = [self addPhotoWithID:[flickrDict objectForKey:@"id"]];
                     photo.farm = [NSString stringWithFormat: @"%@", [flickrDict objectForKey:@"farm"]];
                     photo.secret = [flickrDict objectForKey:@"secret"];
                     photo.server = [flickrDict objectForKey:@"server"];
-                    photo.userLocation = self.userLocation;
+                    photo.userLocation = location;
 
                     [self getPhotoDetails:photo];
+                    
                 }
                 
             });
@@ -89,7 +94,21 @@
         photo.photoID = photoID;
     }
     return photo;
+    
+//    NSError *error = nil;
+//    if (![self.managedObjectContext save:&error]) {
+//        // Replace this implementation with code to handle the error appropriately.
+//        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+//        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+//        abort();
+//    }
 }
+
+//-(void)addLocation {
+//
+//    self.userLocation.latitude = self.latitude;
+//    self.userLocation.longitude = self.longitude;
+//}
 
 
 -(Photo *)photoWithID:(NSString *)photoID {
@@ -106,9 +125,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self startSingleLocationRequest];
-    
+    [self loadPhotos];
+   // [self addLocation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -144,6 +162,10 @@
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showPhotoDetail" sender:self];
+}
+
 #pragma mark getPhotoImages and getPhotoDetails
 
 -(void)getAndConfigurePhotoImage:(NSIndexPath *)indexPath forCell:(FlickrPhotoCell *)cell {
@@ -169,36 +191,15 @@
   
         cell.photographerLabel.text = photo.photographer;
         cell.titleLabel.text = photo.photoTitle;
-
-
 }
 
-#pragma mark startSingleLocationRequest
 
-- (void)startSingleLocationRequest {
-    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
-    self.locationRequestID = [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyBlock
-                                                                timeout:10
-                                                                  block:
-                              ^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
-                                  
-                                  if (status == INTULocationStatusSuccess) {
-                                      self.userLocation = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
-                                      self.userLocation.latitude = currentLocation.coordinate.latitude;
-                                      self.userLocation.longitude = currentLocation.coordinate.longitude;
-                                      
-                                      NSLog (@"coordinate 1: %f, coordinate 2: %f\n", self.userLocation.longitude, self.userLocation.latitude);
-                                      [self loadPhotos];
-                                  }
-                              }];
-}
 
 #pragma mark set the inset on the photo view
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(100, 0, 100, 0);
 }
-
 
 #pragma mark FetchedResultsController
 // create NSFetchedResultsController in our view controller
@@ -220,7 +221,17 @@
     NSArray *sortDescriptors = @[sortDescriptor];
     [fetchRequest setSortDescriptors:sortDescriptors];
        // Initialize Fetched Results Controller
-    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    const float rangeValue = 0.0005;
+    NSNumber *minLatitude = [NSNumber numberWithDouble:(self.latitude - rangeValue)];
+    NSNumber *maxLatitude = [NSNumber numberWithDouble:(self.latitude + rangeValue)];
+    NSNumber *minLongitude = [NSNumber numberWithDouble:(self.longitude - rangeValue)];
+    NSNumber *maxLongitude = [NSNumber numberWithDouble:(self.longitude + rangeValue)];
+    
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(userLocation.latitude > %@) AND (userLocation.latitude < %@) AND (userLocation.longitude > %@) AND (userLocation.longitude < %@)", minLatitude,maxLatitude, minLongitude, maxLongitude];
+    [fetchRequest setPredicate:predicate];
+    
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
     // Configure Fetched Results Controller
     [_fetchedResultsController setDelegate:self];
@@ -265,11 +276,9 @@
     photoDetailViewController.managedObjectContext = self.managedObjectContext;
     NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
     photoDetailViewController.photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        photoDetailViewController.location = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
     }
-    
-    
 }
-
-
 
 @end

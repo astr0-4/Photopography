@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Photo.h"
+#import "Location.h"
 
 @interface PhotoDetailViewController : UIViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Photo *photo;
+@property (strong, nonatomic) Location *location;
 
 
 @end

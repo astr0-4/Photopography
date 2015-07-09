@@ -16,5 +16,7 @@
 @interface FlickrPhotoViewController : UICollectionViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) Location *userLocation;
+@property (nonatomic) CLLocationDegrees longitude;
+@property (nonatomic) CLLocationDegrees latitude;
+
 @end

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hWq-YR-1JM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Geogram-->
@@ -135,15 +136,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYo-10-zYs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="483"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-BU-coa">
+                                <rect key="frame" x="26" y="502" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-Bq-Lhk">
+                                <rect key="frame" x="26" y="531" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYo-10-zYs">
+                                <rect key="frame" x="0.0" y="63" width="320" height="379"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SYo-10-zYs" firstAttribute="top" secondItem="0PI-bQ-IGx" secondAttribute="bottom" id="8hD-Yk-2qa"/>
+                            <constraint firstItem="u2L-h3-7cz" firstAttribute="top" secondItem="fO3-Bq-Lhk" secondAttribute="bottom" constant="16" id="Ffh-fx-L4r"/>
+                            <constraint firstAttribute="trailing" secondItem="SYo-10-zYs" secondAttribute="trailing" id="FqJ-pu-eXn"/>
+                            <constraint firstItem="fO3-Bq-Lhk" firstAttribute="trailing" secondItem="nUI-29-5YY" secondAttribute="trailingMargin" constant="10" id="P7D-hh-Bkg"/>
+                            <constraint firstItem="SYo-10-zYs" firstAttribute="leading" secondItem="nUI-29-5YY" secondAttribute="leading" id="oyd-Tp-KSt"/>
+                            <constraint firstItem="Oae-BU-coa" firstAttribute="leading" secondItem="nUI-29-5YY" secondAttribute="leadingMargin" constant="10" id="rdT-lD-15I"/>
+                            <constraint firstItem="Oae-BU-coa" firstAttribute="trailing" secondItem="nUI-29-5YY" secondAttribute="trailingMargin" constant="10" id="ssT-2p-f9N"/>
+                            <constraint firstItem="Oae-BU-coa" firstAttribute="top" secondItem="SYo-10-zYs" secondAttribute="bottom" constant="60" id="vBO-qY-W7A"/>
+                            <constraint firstItem="fO3-Bq-Lhk" firstAttribute="leading" secondItem="nUI-29-5YY" secondAttribute="leadingMargin" constant="10" id="vn0-sx-KLO"/>
+                            <constraint firstItem="u2L-h3-7cz" firstAttribute="top" secondItem="Oae-BU-coa" secondAttribute="bottom" constant="45" id="zYg-ck-W9x"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="r2e-IL-QfL"/>
+                    <navigationItem key="navigationItem" id="r2e-IL-QfL">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="z2S-Qr-EOG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tcx-1k-XUB">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="Qwo-SA-Ag8" eventType="touchUpInside" id="qdd-3T-ki0"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="photoImageView" destination="SYo-10-zYs" id="tAs-Ja-Rfj"/>
+                        <outlet property="photoLocationLabel" destination="fO3-Bq-Lhk" id="Zf1-EC-ahC"/>
+                        <outlet property="photoTitleLabel" destination="Oae-BU-coa" id="TF7-Xv-ez4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5e-bf-xsN" userLabel="First Responder" sceneMemberID="firstResponder"/>

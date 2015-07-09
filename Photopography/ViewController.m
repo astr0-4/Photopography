@@ -17,9 +17,10 @@
 
 @property (assign, nonatomic) INTULocationRequestID locationRequestID;
 
-@property (nonatomic) CLLocationDegrees latitude;
+@property (nonatomic) CLLocationCoordinate2D location;
 @property (nonatomic) CLLocationDegrees longitude;
-
+@property (nonatomic) CLLocationDegrees latitude;
+//@property (strong, nonatomic) Location *userLocation;
 
 @end
 
@@ -27,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ //   [self startSingleLocationRequest];
+    [self getLocationUpdates];
     // Do any additional setup after loading the view, typically from a nib.
     
     UIInterpolatingMotionEffect *verticalMotionEffect =
@@ -57,12 +60,48 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark startSingleLocationRequest
+
+//subscribe to updates instead of single location request
+
+//- (void)startSingleLocationRequest {
+//    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
+//    self.locationRequestID = [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyBlock
+//                                                                timeout:10
+//                                                                  block:
+//                              ^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+//                                  
+//                                  if (status == INTULocationStatusSuccess) {
+//                                      self.userLocation = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+//                                      self.userLocation.latitude = currentLocation.coordinate.latitude;
+//                                      self.userLocation.longitude = currentLocation.coordinate.longitude;
+//                                      
+//                                      NSLog (@"coordinate 1: %f, coordinate 2: %f\n", self.userLocation.longitude, self.userLocation.latitude);
+//                                      
+//                                  }
+//                              }];
+//}
+
+-(void)getLocationUpdates {
+    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
+    self.locationRequestID = [locMgr subscribeToLocationUpdatesWithBlock:^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
+        NSLog(@"current location: %f, %f", currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+      //  self.userLocation = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+                                              self.latitude = currentLocation.coordinate.latitude;
+                                              self.longitude = currentLocation.coordinate.longitude;
+    }];
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showPhotos"]){
     FlickrPhotoViewController *destinationViewController = (FlickrPhotoViewController *)segue.destinationViewController;
     destinationViewController.managedObjectContext = self.managedObjectContext;
+        destinationViewController.latitude = self.latitude;
+        destinationViewController.longitude = self.longitude;
     }
 }
+
+
 
 
 @end
