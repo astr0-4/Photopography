@@ -53,7 +53,6 @@
 
 - (IBAction)saveButtonPressed:(id)sender {
      UIImageWriteToSavedPhotosAlbum(self.photoImage, nil, nil, nil);
-    
 }
 
 /*

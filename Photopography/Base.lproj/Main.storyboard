@@ -65,12 +65,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="364"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zjy-Ky-5nm">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="364"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zjy-Ky-5nm">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="326"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Flickr Account Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-c8-GSr">
                                             <rect key="frame" x="0.0" y="347" width="287" height="17"/>
-                                            <color key="backgroundColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="5tE-yO-6g9"/>
                                             </constraints>
@@ -80,7 +80,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Flickr Photo Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-kT-deU">
                                             <rect key="frame" x="0.0" y="327" width="287" height="20"/>
-                                            <color key="backgroundColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="aKm-C0-k1E"/>
                                             </constraints>
@@ -99,9 +99,9 @@
                                     <constraint firstItem="Zjy-Ky-5nm" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="Ydg-6d-dGG"/>
                                     <constraint firstAttribute="bottom" secondItem="1oe-c8-GSr" secondAttribute="bottom" id="con-Ic-3YF"/>
                                     <constraint firstItem="1oe-c8-GSr" firstAttribute="leading" secondItem="qNF-x2-bGx" secondAttribute="leading" id="fKD-Rh-9IL"/>
-                                    <constraint firstAttribute="bottom" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" id="twX-MR-qP4"/>
                                     <constraint firstAttribute="trailing" secondItem="Zjy-Ky-5nm" secondAttribute="trailing" id="vTS-Fo-0tv"/>
                                     <constraint firstItem="1oe-c8-GSr" firstAttribute="top" secondItem="3nS-kT-deU" secondAttribute="bottom" id="wWb-97-yHm"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Zjy-Ky-5nm" secondAttribute="bottom" constant="30" id="xX9-BP-O2m"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="photoImageView" destination="Zjy-Ky-5nm" id="quk-uX-abU"/>
@@ -169,10 +169,10 @@
                     <navigationItem key="navigationItem" id="r2e-IL-QfL">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="z2S-Qr-EOG">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tcx-1k-XUB">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <rect key="frame" x="204" y="7" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <state key="normal" title="Save">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save to Photos">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
