@@ -2,7 +2,7 @@
 //  Photo.m
 //  
 //
-//  Created by Alex on 2015-07-07.
+//  Created by Alex on 2015-07-09.
 //
 //
 
@@ -13,13 +13,14 @@
 @implementation Photo
 
 @dynamic farm;
+@dynamic photoDate;
+@dynamic photographer;
 @dynamic photoID;
+@dynamic photoCountry;
+@dynamic photoTitle;
 @dynamic secret;
 @dynamic server;
-@dynamic photoLocation;
-@dynamic photoTitle;
-@dynamic photographer;
-@dynamic photoDate;
+@dynamic photoCity;
 @dynamic userLocation;
 
 @end

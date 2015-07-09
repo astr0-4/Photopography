@@ -11,7 +11,6 @@
 #import "FlickrPhotoViewController.h"
 
 @interface ViewController ()
-
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *requestCurrentLocationButton;
 
@@ -20,15 +19,14 @@
 @property (nonatomic) CLLocationCoordinate2D location;
 @property (nonatomic) CLLocationDegrees longitude;
 @property (nonatomic) CLLocationDegrees latitude;
-//@property (strong, nonatomic) Location *userLocation;
+@property (nonatomic, strong) NSArray *locations;
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- //   [self startSingleLocationRequest];
     [self getLocationUpdates];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -59,28 +57,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark startSingleLocationRequest
-
-//subscribe to updates instead of single location request
-
-//- (void)startSingleLocationRequest {
-//    INTULocationManager *locMgr = [INTULocationManager sharedInstance];
-//    self.locationRequestID = [locMgr requestLocationWithDesiredAccuracy:INTULocationAccuracyBlock
-//                                                                timeout:10
-//                                                                  block:
-//                              ^(CLLocation *currentLocation, INTULocationAccuracy achievedAccuracy, INTULocationStatus status) {
-//                                  
-//                                  if (status == INTULocationStatusSuccess) {
-//                                      self.userLocation = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
-//                                      self.userLocation.latitude = currentLocation.coordinate.latitude;
-//                                      self.userLocation.longitude = currentLocation.coordinate.longitude;
-//                                      
-//                                      NSLog (@"coordinate 1: %f, coordinate 2: %f\n", self.userLocation.longitude, self.userLocation.latitude);
-//                                      
-//                                  }
-//                              }];
+//-(CLLocationCoordinate2D *)getRandomLocation{
+//    {
+//        NSDictionary *randomPlaces = @{
+//                                       @"New York, New York" : {40.712784, -74.005941}
+//                                       };
+//    }
+//
+//    
 //}
+
+#pragma mark getLocationUpdates
+
 
 -(void)getLocationUpdates {
     INTULocationManager *locMgr = [INTULocationManager sharedInstance];

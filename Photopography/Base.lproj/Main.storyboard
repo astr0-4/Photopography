@@ -28,6 +28,17 @@
                                     <segue destination="FPg-zl-Jzb" kind="push" identifier="showPhotos" id="Q5w-wZ-EIi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwI-H7-E3t">
+                                <rect key="frame" x="87" y="373" width="146" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="I'm Feeling Lucky!">
+                                    <color key="titleColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FPg-zl-Jzb" kind="push" identifier="feelingLucky" id="BE5-5w-9Ar"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -152,7 +163,7 @@
                                 <rect key="frame" x="0.0" y="63" width="320" height="379"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SYo-10-zYs" firstAttribute="top" secondItem="0PI-bQ-IGx" secondAttribute="bottom" id="8hD-Yk-2qa"/>
                             <constraint firstItem="u2L-h3-7cz" firstAttribute="top" secondItem="fO3-Bq-Lhk" secondAttribute="bottom" constant="16" id="Ffh-fx-L4r"/>
@@ -217,4 +228,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="BE5-5w-9Ar"/>
+    </inferredMetricsTieBreakers>
 </document>

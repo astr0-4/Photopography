@@ -36,7 +36,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             photo.photoTitle = [[photoInfo objectForKey:@"title"] objectForKey:@"_content"];
             photo.photographer = [[photoInfo objectForKey:@"owner"] objectForKey:@"realname"];
-            photo.photoLocation = [[photoInfo objectForKey:@"owner"] objectForKey:@"location"];
+            photo.photoCity = [[[photoInfo objectForKey:@"location"] objectForKey:@"locality"] objectForKey:@"_content"];
+            photo.photoCountry = [[[photoInfo objectForKey:@"location"] objectForKey:@"country"] objectForKey:@"_content"];
             NSString *dateString = [[photoInfo objectForKey:@"dates"] objectForKey:@"taken"];
             photo.photoDate = [self convertStringtoDateObject:dateString];
         });

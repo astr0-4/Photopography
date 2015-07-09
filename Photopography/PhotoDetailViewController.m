@@ -23,13 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.photoTitleLabel.text= self.photo.photoTitle;
+    self.photoLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.photo.photoCity, self.photo.photoCountry];
     [self loadPhoto];
- //   self.photoLocationLabel.text = [NSString stringWithFormat:@"%f", self.photo.userLocation.latitude];
-    
-    
-   // self.photoImageView.image = self.photo;
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,15 +49,5 @@
 - (IBAction)saveButtonPressed:(id)sender {
      UIImageWriteToSavedPhotosAlbum(self.photoImage, nil, nil, nil);
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
