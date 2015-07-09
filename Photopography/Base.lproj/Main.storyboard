@@ -55,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="587" y="346"/>
         </scene>
-        <!--Flickr Photo View Controller-->
+        <!--Photos-->
         <scene sceneID="R8a-yP-24x">
             <objects>
                 <collectionViewController id="FPg-zl-Jzb" customClass="FlickrPhotoViewController" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                             <outlet property="delegate" destination="FPg-zl-Jzb" id="AYP-GP-67D"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="maK-sU-eZF"/>
+                    <navigationItem key="navigationItem" title="Photos" id="maK-sU-eZF"/>
                     <connections>
                         <segue destination="Qwo-SA-Ag8" kind="push" identifier="showPhotoDetail" id="o3Y-yS-VTA"/>
                     </connections>
@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="1002" y="346"/>
         </scene>
-        <!--Photo Detail View Controller-->
+        <!--Photo-->
         <scene sceneID="MiL-02-cO6">
             <objects>
                 <viewController id="Qwo-SA-Ag8" customClass="PhotoDetailViewController" sceneMemberID="viewController">
@@ -167,7 +167,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="GyO-cn-FEz" secondAttribute="trailing" constant="-16" id="wci-oI-GZy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="r2e-IL-QfL">
+                    <navigationItem key="navigationItem" title="Photo" id="r2e-IL-QfL">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="z2S-Qr-EOG">
                             <color key="tintColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
