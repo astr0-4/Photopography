@@ -9,7 +9,7 @@
 #import "FlickrPhotoViewController.h"
 #include "APIKey.h"
 #import "FlickrPhotoCell.h"
-
+#import "GraphViewController.h"
 
 
 @interface FlickrPhotoViewController () <NSFetchedResultsControllerDelegate>
@@ -286,7 +286,9 @@
 }
 
 #pragma prepareForSegue
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     if([segue.identifier isEqualToString:@"showPhotoDetail"]){
         PhotoDetailViewController *photoDetailViewController = (PhotoDetailViewController *)segue.destinationViewController;
         photoDetailViewController.managedObjectContext = self.managedObjectContext;
@@ -294,6 +296,12 @@
         photoDetailViewController.photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
         photoDetailViewController.location = [self.fetchedResultsController objectAtIndexPath:indexPath];
         
+    }
+    
+    if ([segue.identifier isEqualToString:@"showGraph"]){
+        GraphViewController *graphViewController = (GraphViewController *)segue.destinationViewController;
+        graphViewController.longitude = self.longitude;
+        graphViewController.latitude = self.latitude;
     }
 }
 

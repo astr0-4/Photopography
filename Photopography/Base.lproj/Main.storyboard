@@ -55,6 +55,41 @@
             </objects>
             <point key="canvasLocation" x="587" y="346"/>
         </scene>
+        <!--Graph-->
+        <scene sceneID="9IM-hv-DtY">
+            <objects>
+                <viewController id="Wrx-7B-cYb" customClass="GraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V6U-MB-2Oa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rrj-ZO-x4j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fjO-Md-qGA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl5-gW-TVa" customClass="BEMSimpleLineGraphView">
+                                <rect key="frame" x="16" y="84" width="288" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wrx-7B-cYb" id="lnY-9D-qpc"/>
+                                    <outlet property="delegate" destination="Wrx-7B-cYb" id="pYR-dN-d9Z"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="leading" secondItem="fjO-Md-qGA" secondAttribute="leadingMargin" id="4ed-GV-rER"/>
+                            <constraint firstItem="Rrj-ZO-x4j" firstAttribute="top" secondItem="Yl5-gW-TVa" secondAttribute="bottom" constant="20" id="9EX-xr-4SW"/>
+                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="trailing" secondItem="fjO-Md-qGA" secondAttribute="trailingMargin" id="XQ9-X0-i3g"/>
+                            <constraint firstItem="Yl5-gW-TVa" firstAttribute="top" secondItem="V6U-MB-2Oa" secondAttribute="bottom" constant="20" id="qG0-Cg-b7J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Graph" id="Re3-7b-tQw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUH-yw-lBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="-281"/>
+        </scene>
         <!--Photos-->
         <scene sceneID="R8a-yP-24x">
             <objects>
@@ -99,7 +134,14 @@
                             <outlet property="delegate" destination="FPg-zl-Jzb" id="AYP-GP-67D"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Photos" id="maK-sU-eZF"/>
+                    <navigationItem key="navigationItem" title="Photos" id="maK-sU-eZF">
+                        <barButtonItem key="rightBarButtonItem" title="Graph" id="TmR-if-mPJ">
+                            <color key="tintColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Wrx-7B-cYb" kind="push" identifier="showGraph" id="ssc-zB-6Cw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Qwo-SA-Ag8" kind="push" identifier="showPhotoDetail" id="o3Y-yS-VTA"/>
                     </connections>
