@@ -7,275 +7,275 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		145386D96A73D41BD1E16C63 /* INTULocationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F6EC8A34A5B32C7C2D067D /* INTULocationRequest.h */; };
-		1EE4E63A8EFA9ECCE2606AF2 /* BEMAverageLine.h in Headers */ = {isa = PBXBuildFile; fileRef = A0A80284B9C25923909F5611 /* BEMAverageLine.h */; };
-		1FE973F7D706F60CC2774C95 /* INTULocationRequestDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 544F1D739C1EC305BBDD4A3C /* INTULocationRequestDefines.h */; };
-		27895E9D1A2DCEBBD344F390 /* Pods-BEMSimpleLineGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7379568A66B4460FEB904B /* Pods-BEMSimpleLineGraph-dummy.m */; };
-		2FC1C47607A6CBA57AF83A79 /* BEMAverageLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5435E382488AB9A6658637B0 /* BEMAverageLine.m */; };
-		37D86CFA55C3F7C58D0E8A3C /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE091BBC10560B16BED3EA2 /* Pods-dummy.m */; };
-		4950F7F210FC31476D2F824B /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 375459C12E4595610CE561C6 /* BEMSimpleLineGraphView.m */; };
-		4D86A1EB470FBBE505A5B914 /* INTULocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B4C7CD73052F7528C7DE5BB /* INTULocationManager.h */; };
-		69A16E721CC48C23053C8A42 /* Pods-INTULocationManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C86557DCF87F3F9583C98C /* Pods-INTULocationManager-dummy.m */; };
-		6E5BB7A84318BCC3171D3AB4 /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7DF777C2D7B7000A9012 /* BEMPermanentPopupView.m */; };
-		9927AA6EB930A2A756F2147D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F0C4FFF0734C3C06D4ADEB /* Foundation.framework */; };
-		A3160983B19CC1531AA9EF43 /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA628ADA2E0A40C02D2760A /* BEMCircle.m */; };
-		AE896ACD71FD70C981C8F86E /* BEMPermanentPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = FF5D87112CE20FF5417E762B /* BEMPermanentPopupView.h */; };
-		B627575CA8405C5D3F34802C /* BEMLine.h in Headers */ = {isa = PBXBuildFile; fileRef = EC3342C011CF7A249B4D86EE /* BEMLine.h */; };
-		BCA71161574BF687024B1482 /* INTULocationManager+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 35004CCC697A4A1BF5EE58B2 /* INTULocationManager+Internal.h */; };
-		BDE5F32F4D5BA9755CBB36E5 /* BEMCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE69CFD91894439E8E354BB /* BEMCircle.h */; };
-		C3EF179E4A1B0F6A88CC007F /* BEMSimpleLineGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = E71DE3352ACF8AC3E4434166 /* BEMSimpleLineGraphView.h */; };
-		C67BEEB52E7EBF2853EDA796 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B117B681885A559DAA4CBF79 /* INTULocationRequest.m */; };
-		E269D2E97BCC1F47E1319FE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F0C4FFF0734C3C06D4ADEB /* Foundation.framework */; };
-		E5C40C9B7BEFBC15379171AB /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE13359B35F35D48AA44AB /* BEMLine.m */; };
-		F59D72F4B6E801BB79489E94 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5CBD8F5C94C82446B358D9 /* INTULocationManager.m */; };
-		FDA2C09296F1C3501D27B1B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F0C4FFF0734C3C06D4ADEB /* Foundation.framework */; };
+		2A9C187FCC7AB449E575D71E /* BEMAverageLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 7264467B73DCC34157516E5E /* BEMAverageLine.h */; };
+		2C3E30CF55E3962B0A230F7A /* Pods-BEMSimpleLineGraph-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D40F71AAD2136BB134AE0F7C /* Pods-BEMSimpleLineGraph-dummy.m */; };
+		2CA779D18AD699E366451991 /* BEMAverageLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D7B65635224A4773D50289 /* BEMAverageLine.m */; };
+		4D27BCDC8AD514DF396E8A4D /* INTULocationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A9565D9E11F8377EDDA5EA8B /* INTULocationRequest.h */; };
+		4ED6DCCB4F1A883EF20BE99B /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C23F79A915EEDFBDD20833A8 /* Pods-dummy.m */; };
+		541A24D82AE92D2F917C0009 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A10EFDF3E4E3FE4F204917 /* Foundation.framework */; };
+		683F1C4D81D9378FB2BDD4B0 /* BEMLine.h in Headers */ = {isa = PBXBuildFile; fileRef = D9558017964CDB70673C6CDE /* BEMLine.h */; };
+		68DD6407061D50F5A8177A36 /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AA27D457EDBF364F788C69 /* BEMSimpleLineGraphView.m */; };
+		6EE274E0EF181398377B310E /* BEMSimpleLineGraphView.h in Headers */ = {isa = PBXBuildFile; fileRef = F0A0D30EE5F68D7C7E8FFB9C /* BEMSimpleLineGraphView.h */; };
+		6FB6D9FDCCEA9E71A06AF0C3 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 325EC6E0496D2CBDFC432468 /* INTULocationManager.m */; };
+		76A4799C9AD1314ADB833713 /* INTULocationRequestDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CFF60591AF073002B5E4D76 /* INTULocationRequestDefines.h */; };
+		8788AA2952CE796FC2B9E3E2 /* INTULocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5206FFDD292C172F05D8C939 /* INTULocationManager.h */; };
+		8EB319A4C3A2804C9ED01EC5 /* BEMCircle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BD280F8E05573C65047216F /* BEMCircle.h */; };
+		AB5CC2BBEBDEDAEC572BE9F8 /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D5F22E2265FA223BC4CA2 /* BEMLine.m */; };
+		CB89E61945E1600DE818255F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A10EFDF3E4E3FE4F204917 /* Foundation.framework */; };
+		CFE5B3A5B33B1A11A5D67D76 /* Pods-INTULocationManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 525870183DEF6610B6835724 /* Pods-INTULocationManager-dummy.m */; };
+		D595EF4413A233699EB23EEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A10EFDF3E4E3FE4F204917 /* Foundation.framework */; };
+		D8AF5AA4709A24E9AB40F9FB /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 941DF0593BA79044B83345C3 /* BEMPermanentPopupView.m */; };
+		EE6AA6481526D2E2AD544703 /* INTULocationManager+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 835A7FF0C0B5AD40B3691D73 /* INTULocationManager+Internal.h */; };
+		F333E84B09218261CAC3F003 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC4886AB0BBBFB8329D9919 /* INTULocationRequest.m */; };
+		F8CDE6A5C3EAEECB0CD5BA69 /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B2F7A6E9ED54AA3119018 /* BEMCircle.m */; };
+		FA6F0532921A841D93B099E1 /* BEMPermanentPopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = A2174DA49E7D786DB60E61F8 /* BEMPermanentPopupView.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5A86FA7784BCB5F57949F278 /* PBXContainerItemProxy */ = {
+		715F0F8ED81673D29E8D2749 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CAC0975B234DC8ACB8FEBB5E /* Project object */;
+			containerPortal = BC6D27B7FDA96093A0DB2002 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1A93DDD6DDA8220DC400DA18;
+			remoteGlobalIDString = 06C1C48E10DC5F4857B249D4;
 			remoteInfo = "Pods-BEMSimpleLineGraph";
 		};
-		65A051224051FC5FBE624E27 /* PBXContainerItemProxy */ = {
+		C4AE26012020B6E23DBBDDB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CAC0975B234DC8ACB8FEBB5E /* Project object */;
+			containerPortal = BC6D27B7FDA96093A0DB2002 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7389D0BA7DCBB30CC7F5581D;
+			remoteGlobalIDString = 0B50297DFC4537EC61F9CCFB;
 			remoteInfo = "Pods-INTULocationManager";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B5CBD8F5C94C82446B358D9 /* INTULocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = INTULocationManager.m; path = LocationManager/INTULocationManager/INTULocationManager.m; sourceTree = "<group>"; };
-		223119F3AC8BB836706EF46A /* Pods-INTULocationManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-INTULocationManager.xcconfig"; sourceTree = "<group>"; };
-		2F1680271E002FB6A9141686 /* libPods-INTULocationManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-INTULocationManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		35004CCC697A4A1BF5EE58B2 /* INTULocationManager+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "INTULocationManager+Internal.h"; path = "LocationManager/INTULocationManager/INTULocationManager+Internal.h"; sourceTree = "<group>"; };
-		375459C12E4595610CE561C6 /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMSimpleLineGraphView.m; path = Classes/BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
-		3C47ED97760BB3944680AB5E /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3CDE13359B35F35D48AA44AB /* BEMLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMLine.m; path = Classes/BEMLine.m; sourceTree = "<group>"; };
-		5435E382488AB9A6658637B0 /* BEMAverageLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAverageLine.m; path = Classes/BEMAverageLine.m; sourceTree = "<group>"; };
-		544F1D739C1EC305BBDD4A3C /* INTULocationRequestDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = INTULocationRequestDefines.h; path = LocationManager/INTULocationManager/INTULocationRequestDefines.h; sourceTree = "<group>"; };
-		5B4D7DF777C2D7B7000A9012 /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPermanentPopupView.m; path = Classes/BEMPermanentPopupView.m; sourceTree = "<group>"; };
-		6B4C7CD73052F7528C7DE5BB /* INTULocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = INTULocationManager.h; path = LocationManager/INTULocationManager/INTULocationManager.h; sourceTree = "<group>"; };
-		7ADC16CF85AC4D90B22CF6CE /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		84F6EC8A34A5B32C7C2D067D /* INTULocationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = INTULocationRequest.h; path = LocationManager/INTULocationManager/INTULocationRequest.h; sourceTree = "<group>"; };
-		89D9A72005F814EF65671033 /* Pods-BEMSimpleLineGraph-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BEMSimpleLineGraph-Private.xcconfig"; sourceTree = "<group>"; };
-		95E4F8150D8C5B17476BD784 /* Pods-INTULocationManager-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-INTULocationManager-Private.xcconfig"; sourceTree = "<group>"; };
-		9EE091BBC10560B16BED3EA2 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		A0A80284B9C25923909F5611 /* BEMAverageLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAverageLine.h; path = Classes/BEMAverageLine.h; sourceTree = "<group>"; };
-		A3F0C4FFF0734C3C06D4ADEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AEE69CFD91894439E8E354BB /* BEMCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCircle.h; path = Classes/BEMCircle.h; sourceTree = "<group>"; };
-		B117B681885A559DAA4CBF79 /* INTULocationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = INTULocationRequest.m; path = LocationManager/INTULocationManager/INTULocationRequest.m; sourceTree = "<group>"; };
-		B26F1731123F0F50F73B8563 /* Pods-INTULocationManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-INTULocationManager-prefix.pch"; sourceTree = "<group>"; };
-		BBA628ADA2E0A40C02D2760A /* BEMCircle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCircle.m; path = Classes/BEMCircle.m; sourceTree = "<group>"; };
-		BE2D7CFF2D91DD40A84F758E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE55D0099E4D128FB9918EE4 /* Pods-BEMSimpleLineGraph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BEMSimpleLineGraph-prefix.pch"; sourceTree = "<group>"; };
-		C6480A9C051B9F17474E2B32 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		CDB943A947789D817805E48C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		CF2F088F84DC66145188F26F /* Pods-BEMSimpleLineGraph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BEMSimpleLineGraph.xcconfig"; sourceTree = "<group>"; };
-		E5702473CF415A50A25CC95B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		E71DE3352ACF8AC3E4434166 /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMSimpleLineGraphView.h; path = Classes/BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
-		E89985CBC1C0855C77B8001B /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		E9C4B21D0D658EBCE90F9A41 /* libPods-BEMSimpleLineGraph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BEMSimpleLineGraph.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC3342C011CF7A249B4D86EE /* BEMLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMLine.h; path = Classes/BEMLine.h; sourceTree = "<group>"; };
-		F4A7A3E08BE6822C941328C8 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F5C86557DCF87F3F9583C98C /* Pods-INTULocationManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-INTULocationManager-dummy.m"; sourceTree = "<group>"; };
-		FC7379568A66B4460FEB904B /* Pods-BEMSimpleLineGraph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BEMSimpleLineGraph-dummy.m"; sourceTree = "<group>"; };
-		FF5D87112CE20FF5417E762B /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPermanentPopupView.h; path = Classes/BEMPermanentPopupView.h; sourceTree = "<group>"; };
+		094697290C7B5F6B44A25771 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		19AAFAD775C9830EA8660F35 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		1BD280F8E05573C65047216F /* BEMCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCircle.h; path = Classes/BEMCircle.h; sourceTree = "<group>"; };
+		1FAD75EC7D52C19A0662A094 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		325EC6E0496D2CBDFC432468 /* INTULocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = INTULocationManager.m; path = LocationManager/INTULocationManager/INTULocationManager.m; sourceTree = "<group>"; };
+		3D6D5F22E2265FA223BC4CA2 /* BEMLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMLine.m; path = Classes/BEMLine.m; sourceTree = "<group>"; };
+		5206FFDD292C172F05D8C939 /* INTULocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = INTULocationManager.h; path = LocationManager/INTULocationManager/INTULocationManager.h; sourceTree = "<group>"; };
+		525870183DEF6610B6835724 /* Pods-INTULocationManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-INTULocationManager-dummy.m"; sourceTree = "<group>"; };
+		58E3EB749D58D756E7C0EFBD /* Pods-BEMSimpleLineGraph.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BEMSimpleLineGraph.xcconfig"; sourceTree = "<group>"; };
+		7264467B73DCC34157516E5E /* BEMAverageLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAverageLine.h; path = Classes/BEMAverageLine.h; sourceTree = "<group>"; };
+		79A10EFDF3E4E3FE4F204917 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7CFF60591AF073002B5E4D76 /* INTULocationRequestDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = INTULocationRequestDefines.h; path = LocationManager/INTULocationManager/INTULocationRequestDefines.h; sourceTree = "<group>"; };
+		80D06A54873A02527DC5E645 /* Pods-INTULocationManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-INTULocationManager.xcconfig"; sourceTree = "<group>"; };
+		835A7FF0C0B5AD40B3691D73 /* INTULocationManager+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "INTULocationManager+Internal.h"; path = "LocationManager/INTULocationManager/INTULocationManager+Internal.h"; sourceTree = "<group>"; };
+		899B7212DB140207274C7400 /* Pods-BEMSimpleLineGraph-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BEMSimpleLineGraph-Private.xcconfig"; sourceTree = "<group>"; };
+		914945767799481F0F5573F8 /* Pods-INTULocationManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-INTULocationManager-prefix.pch"; sourceTree = "<group>"; };
+		941DF0593BA79044B83345C3 /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPermanentPopupView.m; path = Classes/BEMPermanentPopupView.m; sourceTree = "<group>"; };
+		A0F29D9A4EA48EFEF3FF1B75 /* Pods-INTULocationManager-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-INTULocationManager-Private.xcconfig"; sourceTree = "<group>"; };
+		A2174DA49E7D786DB60E61F8 /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPermanentPopupView.h; path = Classes/BEMPermanentPopupView.h; sourceTree = "<group>"; };
+		A9565D9E11F8377EDDA5EA8B /* INTULocationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = INTULocationRequest.h; path = LocationManager/INTULocationManager/INTULocationRequest.h; sourceTree = "<group>"; };
+		AF00CAE41AAA5693DF90E1E8 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		B0AA27D457EDBF364F788C69 /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMSimpleLineGraphView.m; path = Classes/BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		B976CB0E55349F14173DB9D9 /* libPods-INTULocationManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-INTULocationManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB51C74B3523F6FE59CFA604 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD9893E35B73C31F66FB2B96 /* Pods-BEMSimpleLineGraph-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BEMSimpleLineGraph-prefix.pch"; sourceTree = "<group>"; };
+		C21B2F7A6E9ED54AA3119018 /* BEMCircle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCircle.m; path = Classes/BEMCircle.m; sourceTree = "<group>"; };
+		C23F79A915EEDFBDD20833A8 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		C7D7B65635224A4773D50289 /* BEMAverageLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAverageLine.m; path = Classes/BEMAverageLine.m; sourceTree = "<group>"; };
+		CCC4886AB0BBBFB8329D9919 /* INTULocationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = INTULocationRequest.m; path = LocationManager/INTULocationManager/INTULocationRequest.m; sourceTree = "<group>"; };
+		D40F71AAD2136BB134AE0F7C /* Pods-BEMSimpleLineGraph-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BEMSimpleLineGraph-dummy.m"; sourceTree = "<group>"; };
+		D6E462753D191A9ACB562236 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9558017964CDB70673C6CDE /* BEMLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMLine.h; path = Classes/BEMLine.h; sourceTree = "<group>"; };
+		DA7576FC7F8EA4EA6C96EB7F /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		E8B060D75A0D56D1BD3E5CB0 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		F0A0D30EE5F68D7C7E8FFB9C /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMSimpleLineGraphView.h; path = Classes/BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		F2E247EB76D2B379235B4C2D /* libPods-BEMSimpleLineGraph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BEMSimpleLineGraph.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		13E74C41FA7E0D787905C1B3 /* Frameworks */ = {
+		6428F5737DCB298FC113A2EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9927AA6EB930A2A756F2147D /* Foundation.framework in Frameworks */,
+				D595EF4413A233699EB23EEE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A03CDF5166EA07AC9E267F0 /* Frameworks */ = {
+		A6E3269C7E137C5D4B65EADA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA2C09296F1C3501D27B1B1 /* Foundation.framework in Frameworks */,
+				541A24D82AE92D2F917C0009 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD20096B5044BF31E6D58E9D /* Frameworks */ = {
+		F0CA87949EB08B11645B1240 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E269D2E97BCC1F47E1319FE9 /* Foundation.framework in Frameworks */,
+				CB89E61945E1600DE818255F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C340BE434F7ECDC6F9673E6 /* BEMSimpleLineGraph */ = {
+		2A38E6E4C37D997D9D40FCC1 = {
 			isa = PBXGroup;
 			children = (
-				A0A80284B9C25923909F5611 /* BEMAverageLine.h */,
-				5435E382488AB9A6658637B0 /* BEMAverageLine.m */,
-				AEE69CFD91894439E8E354BB /* BEMCircle.h */,
-				BBA628ADA2E0A40C02D2760A /* BEMCircle.m */,
-				EC3342C011CF7A249B4D86EE /* BEMLine.h */,
-				3CDE13359B35F35D48AA44AB /* BEMLine.m */,
-				FF5D87112CE20FF5417E762B /* BEMPermanentPopupView.h */,
-				5B4D7DF777C2D7B7000A9012 /* BEMPermanentPopupView.m */,
-				E71DE3352ACF8AC3E4434166 /* BEMSimpleLineGraphView.h */,
-				375459C12E4595610CE561C6 /* BEMSimpleLineGraphView.m */,
-				348514C5857419FE9C6C0F4C /* Support Files */,
+				BB51C74B3523F6FE59CFA604 /* Podfile */,
+				FADACE7DA883D863F823E349 /* Frameworks */,
+				EBB423780C3D1077EA352CB3 /* Pods */,
+				AC786A6B3437AE7CF7EC02DF /* Products */,
+				3382B7C10C073305363ED876 /* Targets Support Files */,
 			);
-			path = BEMSimpleLineGraph;
 			sourceTree = "<group>";
 		};
-		2ECC138362A4825366276219 /* iOS */ = {
+		3382B7C10C073305363ED876 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A3F0C4FFF0734C3C06D4ADEB /* Foundation.framework */,
+				82DF2D11D8A573DD7C82811E /* Pods */,
 			);
-			name = iOS;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		348514C5857419FE9C6C0F4C /* Support Files */ = {
+		7BD427F38FFCD6F08FB55D49 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF2F088F84DC66145188F26F /* Pods-BEMSimpleLineGraph.xcconfig */,
-				89D9A72005F814EF65671033 /* Pods-BEMSimpleLineGraph-Private.xcconfig */,
-				FC7379568A66B4460FEB904B /* Pods-BEMSimpleLineGraph-dummy.m */,
-				BE55D0099E4D128FB9918EE4 /* Pods-BEMSimpleLineGraph-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-BEMSimpleLineGraph";
-			sourceTree = "<group>";
-		};
-		37BB9EEDFF03F74E72127964 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2C340BE434F7ECDC6F9673E6 /* BEMSimpleLineGraph */,
-				A1BFF414D0F47195FE2AF7B6 /* INTULocationManager */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		7006249E9D2BEEC9002D42A1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				223119F3AC8BB836706EF46A /* Pods-INTULocationManager.xcconfig */,
-				95E4F8150D8C5B17476BD784 /* Pods-INTULocationManager-Private.xcconfig */,
-				F5C86557DCF87F3F9583C98C /* Pods-INTULocationManager-dummy.m */,
-				B26F1731123F0F50F73B8563 /* Pods-INTULocationManager-prefix.pch */,
+				80D06A54873A02527DC5E645 /* Pods-INTULocationManager.xcconfig */,
+				A0F29D9A4EA48EFEF3FF1B75 /* Pods-INTULocationManager-Private.xcconfig */,
+				525870183DEF6610B6835724 /* Pods-INTULocationManager-dummy.m */,
+				914945767799481F0F5573F8 /* Pods-INTULocationManager-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-INTULocationManager";
 			sourceTree = "<group>";
 		};
-		A1BFF414D0F47195FE2AF7B6 /* INTULocationManager */ = {
+		82DF2D11D8A573DD7C82811E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6B4C7CD73052F7528C7DE5BB /* INTULocationManager.h */,
-				0B5CBD8F5C94C82446B358D9 /* INTULocationManager.m */,
-				35004CCC697A4A1BF5EE58B2 /* INTULocationManager+Internal.h */,
-				84F6EC8A34A5B32C7C2D067D /* INTULocationRequest.h */,
-				B117B681885A559DAA4CBF79 /* INTULocationRequest.m */,
-				544F1D739C1EC305BBDD4A3C /* INTULocationRequestDefines.h */,
-				7006249E9D2BEEC9002D42A1 /* Support Files */,
-			);
-			path = INTULocationManager;
-			sourceTree = "<group>";
-		};
-		A4DBB871CD15C42DDD684B83 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE2D7CFF2D91DD40A84F758E /* libPods.a */,
-				E9C4B21D0D658EBCE90F9A41 /* libPods-BEMSimpleLineGraph.a */,
-				2F1680271E002FB6A9141686 /* libPods-INTULocationManager.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C9BA5400C4B10F7B96DB1C2B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2ECC138362A4825366276219 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D079BF425DB54076D18DCC97 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F4A7A3E08BE6822C941328C8 /* Pods-acknowledgements.markdown */,
-				E89985CBC1C0855C77B8001B /* Pods-acknowledgements.plist */,
-				9EE091BBC10560B16BED3EA2 /* Pods-dummy.m */,
-				C6480A9C051B9F17474E2B32 /* Pods-environment.h */,
-				7ADC16CF85AC4D90B22CF6CE /* Pods-resources.sh */,
-				CDB943A947789D817805E48C /* Pods.debug.xcconfig */,
-				E5702473CF415A50A25CC95B /* Pods.release.xcconfig */,
+				094697290C7B5F6B44A25771 /* Pods-acknowledgements.markdown */,
+				DA7576FC7F8EA4EA6C96EB7F /* Pods-acknowledgements.plist */,
+				C23F79A915EEDFBDD20833A8 /* Pods-dummy.m */,
+				AF00CAE41AAA5693DF90E1E8 /* Pods-environment.h */,
+				E8B060D75A0D56D1BD3E5CB0 /* Pods-resources.sh */,
+				19AAFAD775C9830EA8660F35 /* Pods.debug.xcconfig */,
+				1FAD75EC7D52C19A0662A094 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		D6F5F291FFDA3668FD4BB3E4 = {
+		AC786A6B3437AE7CF7EC02DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C47ED97760BB3944680AB5E /* Podfile */,
-				C9BA5400C4B10F7B96DB1C2B /* Frameworks */,
-				37BB9EEDFF03F74E72127964 /* Pods */,
-				A4DBB871CD15C42DDD684B83 /* Products */,
-				F16F70741F0AFB302D700E2E /* Targets Support Files */,
+				D6E462753D191A9ACB562236 /* libPods.a */,
+				F2E247EB76D2B379235B4C2D /* libPods-BEMSimpleLineGraph.a */,
+				B976CB0E55349F14173DB9D9 /* libPods-INTULocationManager.a */,
 			);
+			name = Products;
 			sourceTree = "<group>";
 		};
-		F16F70741F0AFB302D700E2E /* Targets Support Files */ = {
+		AEF3C5E48EE544285FED58A5 /* BEMSimpleLineGraph */ = {
 			isa = PBXGroup;
 			children = (
-				D079BF425DB54076D18DCC97 /* Pods */,
+				7264467B73DCC34157516E5E /* BEMAverageLine.h */,
+				C7D7B65635224A4773D50289 /* BEMAverageLine.m */,
+				1BD280F8E05573C65047216F /* BEMCircle.h */,
+				C21B2F7A6E9ED54AA3119018 /* BEMCircle.m */,
+				D9558017964CDB70673C6CDE /* BEMLine.h */,
+				3D6D5F22E2265FA223BC4CA2 /* BEMLine.m */,
+				A2174DA49E7D786DB60E61F8 /* BEMPermanentPopupView.h */,
+				941DF0593BA79044B83345C3 /* BEMPermanentPopupView.m */,
+				F0A0D30EE5F68D7C7E8FFB9C /* BEMSimpleLineGraphView.h */,
+				B0AA27D457EDBF364F788C69 /* BEMSimpleLineGraphView.m */,
+				B149273D808F8640C1DA1E93 /* Support Files */,
 			);
-			name = "Targets Support Files";
+			path = BEMSimpleLineGraph;
+			sourceTree = "<group>";
+		};
+		B149273D808F8640C1DA1E93 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58E3EB749D58D756E7C0EFBD /* Pods-BEMSimpleLineGraph.xcconfig */,
+				899B7212DB140207274C7400 /* Pods-BEMSimpleLineGraph-Private.xcconfig */,
+				D40F71AAD2136BB134AE0F7C /* Pods-BEMSimpleLineGraph-dummy.m */,
+				BD9893E35B73C31F66FB2B96 /* Pods-BEMSimpleLineGraph-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-BEMSimpleLineGraph";
+			sourceTree = "<group>";
+		};
+		C33C9A6FBA7EE2C18F8199D1 /* INTULocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				5206FFDD292C172F05D8C939 /* INTULocationManager.h */,
+				325EC6E0496D2CBDFC432468 /* INTULocationManager.m */,
+				835A7FF0C0B5AD40B3691D73 /* INTULocationManager+Internal.h */,
+				A9565D9E11F8377EDDA5EA8B /* INTULocationRequest.h */,
+				CCC4886AB0BBBFB8329D9919 /* INTULocationRequest.m */,
+				7CFF60591AF073002B5E4D76 /* INTULocationRequestDefines.h */,
+				7BD427F38FFCD6F08FB55D49 /* Support Files */,
+			);
+			path = INTULocationManager;
+			sourceTree = "<group>";
+		};
+		C7BFC98BB8569B80BB3B8F6F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				79A10EFDF3E4E3FE4F204917 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EBB423780C3D1077EA352CB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEF3C5E48EE544285FED58A5 /* BEMSimpleLineGraph */,
+				C33C9A6FBA7EE2C18F8199D1 /* INTULocationManager */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FADACE7DA883D863F823E349 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7BFC98BB8569B80BB3B8F6F /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		127CF1F9BD7EEFD99EF34EA4 /* Headers */ = {
+		A10E563706895BF729C3BCA2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE4E63A8EFA9ECCE2606AF2 /* BEMAverageLine.h in Headers */,
-				BDE5F32F4D5BA9755CBB36E5 /* BEMCircle.h in Headers */,
-				B627575CA8405C5D3F34802C /* BEMLine.h in Headers */,
-				AE896ACD71FD70C981C8F86E /* BEMPermanentPopupView.h in Headers */,
-				C3EF179E4A1B0F6A88CC007F /* BEMSimpleLineGraphView.h in Headers */,
+				2A9C187FCC7AB449E575D71E /* BEMAverageLine.h in Headers */,
+				8EB319A4C3A2804C9ED01EC5 /* BEMCircle.h in Headers */,
+				683F1C4D81D9378FB2BDD4B0 /* BEMLine.h in Headers */,
+				FA6F0532921A841D93B099E1 /* BEMPermanentPopupView.h in Headers */,
+				6EE274E0EF181398377B310E /* BEMSimpleLineGraphView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42727AC9F53655AC14A8F402 /* Headers */ = {
+		A654A407186D1706D216FA2C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCA71161574BF687024B1482 /* INTULocationManager+Internal.h in Headers */,
-				4D86A1EB470FBBE505A5B914 /* INTULocationManager.h in Headers */,
-				145386D96A73D41BD1E16C63 /* INTULocationRequest.h in Headers */,
-				1FE973F7D706F60CC2774C95 /* INTULocationRequestDefines.h in Headers */,
+				EE6AA6481526D2E2AD544703 /* INTULocationManager+Internal.h in Headers */,
+				8788AA2952CE796FC2B9E3E2 /* INTULocationManager.h in Headers */,
+				4D27BCDC8AD514DF396E8A4D /* INTULocationRequest.h in Headers */,
+				76A4799C9AD1314ADB833713 /* INTULocationRequestDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1A93DDD6DDA8220DC400DA18 /* Pods-BEMSimpleLineGraph */ = {
+		06C1C48E10DC5F4857B249D4 /* Pods-BEMSimpleLineGraph */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90602F23D6CBAC29CD969043 /* Build configuration list for PBXNativeTarget "Pods-BEMSimpleLineGraph" */;
+			buildConfigurationList = 62AEAC13B2957C0304D60567 /* Build configuration list for PBXNativeTarget "Pods-BEMSimpleLineGraph" */;
 			buildPhases = (
-				D542B77508D4E592EC660623 /* Sources */,
-				8A03CDF5166EA07AC9E267F0 /* Frameworks */,
-				127CF1F9BD7EEFD99EF34EA4 /* Headers */,
+				FAA96F0252CBE6C4E9EF2B47 /* Sources */,
+				F0CA87949EB08B11645B1240 /* Frameworks */,
+				A10E563706895BF729C3BCA2 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -283,34 +283,16 @@
 			);
 			name = "Pods-BEMSimpleLineGraph";
 			productName = "Pods-BEMSimpleLineGraph";
-			productReference = E9C4B21D0D658EBCE90F9A41 /* libPods-BEMSimpleLineGraph.a */;
+			productReference = F2E247EB76D2B379235B4C2D /* libPods-BEMSimpleLineGraph.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		1D5F0D7D7DBE96671D3243C0 /* Pods */ = {
+		0B50297DFC4537EC61F9CCFB /* Pods-INTULocationManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18CC0394E6F002295B07B30D /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = C7C40AFF5C8A542C0EA8253F /* Build configuration list for PBXNativeTarget "Pods-INTULocationManager" */;
 			buildPhases = (
-				5A8784D18A1AB2D8ACA4422A /* Sources */,
-				13E74C41FA7E0D787905C1B3 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DC7915427EDAB608C48EB284 /* PBXTargetDependency */,
-				3D1223249E14EE89F2190F00 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = BE2D7CFF2D91DD40A84F758E /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		7389D0BA7DCBB30CC7F5581D /* Pods-INTULocationManager */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 44D62AD08C6303136231985F /* Build configuration list for PBXNativeTarget "Pods-INTULocationManager" */;
-			buildPhases = (
-				19F2BA53BB306483D4F8E48C /* Sources */,
-				FD20096B5044BF31E6D58E9D /* Frameworks */,
-				42727AC9F53655AC14A8F402 /* Headers */,
+				E827B6BA56275644035812DE /* Sources */,
+				A6E3269C7E137C5D4B65EADA /* Frameworks */,
+				A654A407186D1706D216FA2C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -318,89 +300,139 @@
 			);
 			name = "Pods-INTULocationManager";
 			productName = "Pods-INTULocationManager";
-			productReference = 2F1680271E002FB6A9141686 /* libPods-INTULocationManager.a */;
+			productReference = B976CB0E55349F14173DB9D9 /* libPods-INTULocationManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F61C6E2C74E1768CA49084EE /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C58F2DCE9383B43F48131DFE /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				FE30D8C3F4F33EA2EC4E921B /* Sources */,
+				6428F5737DCB298FC113A2EF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E3A6AF9DFF22F96C72A8B78 /* PBXTargetDependency */,
+				FD5233D57CABE622481E9B4A /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = D6E462753D191A9ACB562236 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CAC0975B234DC8ACB8FEBB5E /* Project object */ = {
+		BC6D27B7FDA96093A0DB2002 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 12D92C68DBE16C94B327D204 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = CCC6FCE75C22FE12814D1A43 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = D6F5F291FFDA3668FD4BB3E4;
-			productRefGroup = A4DBB871CD15C42DDD684B83 /* Products */;
+			mainGroup = 2A38E6E4C37D997D9D40FCC1;
+			productRefGroup = AC786A6B3437AE7CF7EC02DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D5F0D7D7DBE96671D3243C0 /* Pods */,
-				1A93DDD6DDA8220DC400DA18 /* Pods-BEMSimpleLineGraph */,
-				7389D0BA7DCBB30CC7F5581D /* Pods-INTULocationManager */,
+				F61C6E2C74E1768CA49084EE /* Pods */,
+				06C1C48E10DC5F4857B249D4 /* Pods-BEMSimpleLineGraph */,
+				0B50297DFC4537EC61F9CCFB /* Pods-INTULocationManager */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		19F2BA53BB306483D4F8E48C /* Sources */ = {
+		E827B6BA56275644035812DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F59D72F4B6E801BB79489E94 /* INTULocationManager.m in Sources */,
-				C67BEEB52E7EBF2853EDA796 /* INTULocationRequest.m in Sources */,
-				69A16E721CC48C23053C8A42 /* Pods-INTULocationManager-dummy.m in Sources */,
+				6FB6D9FDCCEA9E71A06AF0C3 /* INTULocationManager.m in Sources */,
+				F333E84B09218261CAC3F003 /* INTULocationRequest.m in Sources */,
+				CFE5B3A5B33B1A11A5D67D76 /* Pods-INTULocationManager-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A8784D18A1AB2D8ACA4422A /* Sources */ = {
+		FAA96F0252CBE6C4E9EF2B47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D86CFA55C3F7C58D0E8A3C /* Pods-dummy.m in Sources */,
+				2CA779D18AD699E366451991 /* BEMAverageLine.m in Sources */,
+				F8CDE6A5C3EAEECB0CD5BA69 /* BEMCircle.m in Sources */,
+				AB5CC2BBEBDEDAEC572BE9F8 /* BEMLine.m in Sources */,
+				D8AF5AA4709A24E9AB40F9FB /* BEMPermanentPopupView.m in Sources */,
+				68DD6407061D50F5A8177A36 /* BEMSimpleLineGraphView.m in Sources */,
+				2C3E30CF55E3962B0A230F7A /* Pods-BEMSimpleLineGraph-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D542B77508D4E592EC660623 /* Sources */ = {
+		FE30D8C3F4F33EA2EC4E921B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FC1C47607A6CBA57AF83A79 /* BEMAverageLine.m in Sources */,
-				A3160983B19CC1531AA9EF43 /* BEMCircle.m in Sources */,
-				E5C40C9B7BEFBC15379171AB /* BEMLine.m in Sources */,
-				6E5BB7A84318BCC3171D3AB4 /* BEMPermanentPopupView.m in Sources */,
-				4950F7F210FC31476D2F824B /* BEMSimpleLineGraphView.m in Sources */,
-				27895E9D1A2DCEBBD344F390 /* Pods-BEMSimpleLineGraph-dummy.m in Sources */,
+				4ED6DCCB4F1A883EF20BE99B /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3D1223249E14EE89F2190F00 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-INTULocationManager";
-			target = 7389D0BA7DCBB30CC7F5581D /* Pods-INTULocationManager */;
-			targetProxy = 65A051224051FC5FBE624E27 /* PBXContainerItemProxy */;
-		};
-		DC7915427EDAB608C48EB284 /* PBXTargetDependency */ = {
+		8E3A6AF9DFF22F96C72A8B78 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-BEMSimpleLineGraph";
-			target = 1A93DDD6DDA8220DC400DA18 /* Pods-BEMSimpleLineGraph */;
-			targetProxy = 5A86FA7784BCB5F57949F278 /* PBXContainerItemProxy */;
+			target = 06C1C48E10DC5F4857B249D4 /* Pods-BEMSimpleLineGraph */;
+			targetProxy = 715F0F8ED81673D29E8D2749 /* PBXContainerItemProxy */;
+		};
+		FD5233D57CABE622481E9B4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-INTULocationManager";
+			target = 0B50297DFC4537EC61F9CCFB /* Pods-INTULocationManager */;
+			targetProxy = C4AE26012020B6E23DBBDDB7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02102B7F98DB9CB8F5AC796A /* Debug */ = {
+		231ADDC386949DC246FFE099 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDB943A947789D817805E48C /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1FAD75EC7D52C19A0662A094 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		24954C3463E70AFDDB00B72F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 899B7212DB140207274C7400 /* Pods-BEMSimpleLineGraph-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BEMSimpleLineGraph/Pods-BEMSimpleLineGraph-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		50A349D1C1C839F349CF2470 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19AAFAD775C9830EA8660F35 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -414,7 +446,57 @@
 			};
 			name = Debug;
 		};
-		1FFC2A98477370CE9C32ADE1 /* Debug */ = {
+		68CAE69E582DF0781540CA44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D19B197AC3E792EF4D9E4A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 899B7212DB140207274C7400 /* Pods-BEMSimpleLineGraph-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BEMSimpleLineGraph/Pods-BEMSimpleLineGraph-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9D1016CBF74F89A80E02ECEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -453,41 +535,9 @@
 			};
 			name = Debug;
 		};
-		2D088CED03B10DD3E1AE1DEC /* Release */ = {
+		9E99B4BFB15143DF2082E583 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89D9A72005F814EF65671033 /* Pods-BEMSimpleLineGraph-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BEMSimpleLineGraph/Pods-BEMSimpleLineGraph-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		65AFF52036F34E865E5A4880 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95E4F8150D8C5B17476BD784 /* Pods-INTULocationManager-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-INTULocationManager/Pods-INTULocationManager-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		9571513F4DAB9A14F6DB7539 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95E4F8150D8C5B17476BD784 /* Pods-INTULocationManager-Private.xcconfig */;
+			baseConfigurationReference = A0F29D9A4EA48EFEF3FF1B75 /* Pods-INTULocationManager-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-INTULocationManager/Pods-INTULocationManager-prefix.pch";
@@ -501,112 +551,62 @@
 			};
 			name = Debug;
 		};
-		A41EDCA27B3BB9492E5CAE8A /* Release */ = {
+		A3DD8915620E6ADF871DB484 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5702473CF415A50A25CC95B /* Pods.release.xcconfig */;
+			baseConfigurationReference = A0F29D9A4EA48EFEF3FF1B75 /* Pods-INTULocationManager-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-INTULocationManager/Pods-INTULocationManager-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
-		};
-		B8541B3C565C549B3BA948A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FC614F28C97A95E600E0007A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89D9A72005F814EF65671033 /* Pods-BEMSimpleLineGraph-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BEMSimpleLineGraph/Pods-BEMSimpleLineGraph-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12D92C68DBE16C94B327D204 /* Build configuration list for PBXProject "Pods" */ = {
+		62AEAC13B2957C0304D60567 /* Build configuration list for PBXNativeTarget "Pods-BEMSimpleLineGraph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FFC2A98477370CE9C32ADE1 /* Debug */,
-				B8541B3C565C549B3BA948A2 /* Release */,
+				24954C3463E70AFDDB00B72F /* Debug */,
+				6D19B197AC3E792EF4D9E4A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18CC0394E6F002295B07B30D /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		C58F2DCE9383B43F48131DFE /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02102B7F98DB9CB8F5AC796A /* Debug */,
-				A41EDCA27B3BB9492E5CAE8A /* Release */,
+				50A349D1C1C839F349CF2470 /* Debug */,
+				231ADDC386949DC246FFE099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44D62AD08C6303136231985F /* Build configuration list for PBXNativeTarget "Pods-INTULocationManager" */ = {
+		C7C40AFF5C8A542C0EA8253F /* Build configuration list for PBXNativeTarget "Pods-INTULocationManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9571513F4DAB9A14F6DB7539 /* Debug */,
-				65AFF52036F34E865E5A4880 /* Release */,
+				9E99B4BFB15143DF2082E583 /* Debug */,
+				A3DD8915620E6ADF871DB484 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90602F23D6CBAC29CD969043 /* Build configuration list for PBXNativeTarget "Pods-BEMSimpleLineGraph" */ = {
+		CCC6FCE75C22FE12814D1A43 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC614F28C97A95E600E0007A /* Debug */,
-				2D088CED03B10DD3E1AE1DEC /* Release */,
+				9D1016CBF74F89A80E02ECEA /* Debug */,
+				68CAE69E582DF0781540CA44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CAC0975B234DC8ACB8FEBB5E /* Project object */;
+	rootObject = BC6D27B7FDA96093A0DB2002 /* Project object */;
 }
