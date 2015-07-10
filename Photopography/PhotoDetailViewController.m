@@ -9,12 +9,13 @@
 #import "PhotoDetailViewController.h"
 #import "APIKey.h"
 
-@interface PhotoDetailViewController ()
+@interface PhotoDetailViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *photoTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *photoLocationLabel;
 @property (strong, nonatomic) UIImage *photoImage;
+
 
 @end
 
@@ -23,8 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.scrollView.minimumZoomScale = 0.25;
-    self.scrollView.maximumZoomScale = 5.0;
+    self.scrollView.minimumZoomScale = 1.0;
+    self.scrollView.maximumZoomScale = 2.0;
+    //self.scrollView.zoomScale = 0.1;
     self.scrollView.contentSize = self.photoImageView.frame.size;
     self.scrollView.delegate = self;
     
@@ -32,6 +34,13 @@
     self.photoLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.photo.photoCity, self.photo.photoCountry];
     [self loadPhoto];
 }
+
+-(void)viewDidAppear:(BOOL)animated {
+
+    
+//    [self.scrollView zoomToRect:self.photoImageView.frame animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -67,6 +76,7 @@
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
     return self.photoImageView;
+    
 }
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale

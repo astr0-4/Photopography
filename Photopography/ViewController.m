@@ -95,8 +95,8 @@
     [self.locations addObject:petraJordan];
     CLLocation *dubrovnik =[[CLLocation alloc] initWithLatitude:42.641573 longitude:18.116133];
     [self.locations addObject:dubrovnik];
-    CLLocation *ago =[[CLLocation alloc] initWithLatitude:43.6536066 longitude:-79.3925123];
-    [self.locations addObject:ago];
+//    CLLocation *ago =[[CLLocation alloc] initWithLatitude:43.6536066 longitude:-79.3925123];
+//    [self.locations addObject:ago];
     
 
     NSUInteger randomIndex = arc4random() % [self.locations count];
