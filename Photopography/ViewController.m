@@ -63,14 +63,14 @@
     //alloc and init all the locations for the array
     CLLocation *newYork =[[CLLocation alloc] initWithLatitude:40.712784 longitude:-74.005941];
     [self.locations addObject:newYork];
-    CLLocation *vancouver = [[CLLocation alloc] initWithLatitude:49.2751079 longitude:-123.0986454];
+    CLLocation *vancouver = [[CLLocation alloc] initWithLatitude:49.284905 longitude:-123.143692];
     [self.locations addObject:vancouver];
     CLLocation *moscow = [[CLLocation alloc] initWithLatitude:55.755826 longitude:37.617300];
     [self.locations addObject:moscow];
     CLLocation *tokyo = [[CLLocation alloc] initWithLatitude:35.685360 longitude:139.753372];
     [self.locations addObject:tokyo];
-    CLLocation *southKorea = [[CLLocation alloc] initWithLatitude:37.511234 longitude:127.098030];
-    [self.locations addObject:southKorea];
+    CLLocation *italy =[[CLLocation alloc] initWithLatitude:44.128109 longitude:9.712391];
+    [self.locations addObject:italy];
     CLLocation *sanFrancisco = [[CLLocation alloc] initWithLatitude:37.774929 longitude:-122.419416];
     [self.locations addObject:sanFrancisco];
     CLLocation *berlin = [[CLLocation alloc] initWithLatitude:52.516640 longitude:13.402318];
@@ -89,9 +89,14 @@
     [self.locations addObject:iceland];
     CLLocation *pyramidsEgypt = [[CLLocation alloc] initWithLatitude:29.976480 longitude:31.131302];
     [self.locations addObject:pyramidsEgypt];
-    CLLocation *lakeLouise = [[CLLocation alloc] initWithLatitude:51.425385 longitude:-116.177319];
-    [self.locations addObject:lakeLouise];
- 
+    CLLocation *chernobyl = [[CLLocation alloc] initWithLatitude:51.405556 longitude:30.056944];
+    [self.locations addObject:chernobyl];
+    CLLocation *petraJordan =[[CLLocation alloc] initWithLatitude:30.322003 longitude:35.451605];
+    [self.locations addObject:petraJordan];
+    CLLocation *dubrovnik =[[CLLocation alloc] initWithLatitude:42.641573 longitude:18.116133];
+    [self.locations addObject:dubrovnik];
+    CLLocation *ago =[[CLLocation alloc] initWithLatitude:43.6536066 longitude:-79.3925123];
+    [self.locations addObject:ago];
     
 
     NSUInteger randomIndex = arc4random() % [self.locations count];
