@@ -32,18 +32,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4B6327149212B1BADAB2A69E /* PBXContainerItemProxy */ = {
+		715F0F8ED81673D29E8D2749 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C58AF269A3764C2001B56B50 /* Project object */;
+			containerPortal = BC6D27B7FDA96093A0DB2002 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 808F940A125F0CA766F231BB;
+			remoteGlobalIDString = 06C1C48E10DC5F4857B249D4;
 			remoteInfo = "Pods-BEMSimpleLineGraph";
 		};
-		52D17A35CA151DC650D1AE3B /* PBXContainerItemProxy */ = {
+		C4AE26012020B6E23DBBDDB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C58AF269A3764C2001B56B50 /* Project object */;
+			containerPortal = BC6D27B7FDA96093A0DB2002 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 649766A74D6682BF16C9861C;
+			remoteGlobalIDString = 0B50297DFC4537EC61F9CCFB;
 			remoteInfo = "Pods-INTULocationManager";
 		};
 /* End PBXContainerItemProxy section */
@@ -132,6 +132,7 @@
 				429885739CF46F1DB5A25423 /* Products */,
 				26C6A7F306CA132B44935D35 /* Targets Support Files */,
 			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		2845A0418370F6297738A517 /* iOS */ = {
@@ -405,9 +406,42 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-BEMSimpleLineGraph/Pods-BEMSimpleLineGraph-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		24954C3463E70AFDDB00B72F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 899B7212DB140207274C7400 /* Pods-BEMSimpleLineGraph-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BEMSimpleLineGraph/Pods-BEMSimpleLineGraph-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		50A349D1C1C839F349CF2470 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19AAFAD775C9830EA8660F35 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -501,11 +535,11 @@
 			baseConfigurationReference = 49B2849CC33C4A7414ADB1CD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BEMSimpleLineGraph/Pods-BEMSimpleLineGraph-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
