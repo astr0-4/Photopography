@@ -13,9 +13,4 @@
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) NSURLSessionDataTask *photoTask;
 
-
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *photographerLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
 @end

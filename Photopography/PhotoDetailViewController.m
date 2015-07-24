@@ -30,7 +30,7 @@
     self.scrollView.contentSize = self.photoImageView.frame.size;
     self.scrollView.delegate = self;
     
-     self.photoTitleLabel.text= self.photo.photoTitle;
+    self.photoTitleLabel.text= self.photo.photoTitle;
     self.photoLocationLabel.text = [NSString stringWithFormat:@"%@, %@", self.photo.photoCity, self.photo.photoCountry];
     [self loadPhoto];
 }

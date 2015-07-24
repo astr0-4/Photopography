@@ -162,7 +162,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     FlickrPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
     [self getAndConfigurePhotoImage:indexPath forCell:cell];
-    [self configurePhotoDetails:indexPath forCell:cell];
+//    [self configurePhotoDetails:indexPath forCell:cell];
     return cell;
 }
 
@@ -199,13 +199,13 @@
     }
 }
 
--(void)configurePhotoDetails:(NSIndexPath *)indexPath forCell:(FlickrPhotoCell *)cell {
-    
-    Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    cell.photographerLabel.text = photo.photographer;
-    cell.titleLabel.text = photo.photoTitle;
-}
+//-(void)configurePhotoDetails:(NSIndexPath *)indexPath forCell:(FlickrPhotoCell *)cell {
+//    
+//    Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//    
+//    cell.photographerLabel.text = photo.photographer;
+//    cell.titleLabel.text = photo.photoTitle;
+//}
 
 
 
@@ -269,7 +269,7 @@
 }
 
 #pragma mark dateFormatter
-//want to format the date string into an NSDate object that Core Data can use as a sort descriptor
+// We want to format the date string into an NSDate object that Core Data can use as a sort descriptor
 
 -(NSDate *)convertStringtoDateObject:(NSString *)dateString {
     static NSDateFormatter *dateFormatter = nil;
