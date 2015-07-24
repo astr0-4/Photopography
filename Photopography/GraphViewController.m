@@ -37,8 +37,14 @@
 //    
 //    [self.view addSubview:myGraph];
     
-    NSArray *firstDayOfMonthUNIX = @[@"1420070400", @"1422748800", @"1425168000", @"1427846400", @"1430438400", @"1433116800", @"1435708800", @"1438387200", @"1441065600", @"1443657600", @"1446336000", @"1448928000",];
-    NSArray *lastDayOfMonthUNIX = @[@"1422748799", @"1425167999", @"1427846399", @"1430438399", @"1433116799", @"1435708799", @"1438387199", @"1441065599", @"1443657599", @"1446335999", @"1448927999", @"1451606399"];
+// Time stamp arrays for the current calendar year of 2015
+//    NSArray *firstDayOfMonthUNIX = @[@"1420070400", @"1422748800", @"1425168000", @"1427846400", @"1430438400", @"1433116800", @"1435708800", @"1438387200", @"1441065600", @"1443657600", @"1446336000", @"1448928000"];
+//    NSArray *lastDayOfMonthUNIX = @[@"1422748799", @"1425167999", @"1427846399", @"1430438399", @"1433116799", @"1435708799", @"1438387199", @"1441065599", @"1443657599", @"1446335999", @"1448927999", @"1451606399"];
+    
+// Time stamp arrays from July 2014 to July 2015
+    NSArray *firstDayOfMonthUNIX = @[@"1406851200", @"1409529600", @"1412121600", @"1414800000", @"1417392000", @"1420070400", @"1422748800", @"1425168000", @"1427846400", @"1430438400", @"1433116800", @"1435708800"];
+    NSArray *lastDayOfMonthUNIX = @[@"1409529599", @"1412121599", @"1414799999", @"1417391999", @"1420070399", @"1422748799", @"1425167999", @"1427846399", @"1430438399", @"1433116799", @"1435708799", @"1438387199"];
+
     
     self.graphValuesArray = [[NSMutableArray alloc] init];
     
@@ -94,7 +100,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
     return self.graphValuesArray.count;
 }
@@ -104,7 +109,11 @@
 }
 
 - (NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index {
-    self.datesArray = [[NSArray alloc] initWithObjects:@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec", nil];
+    // Date labels for the calendar year of 2015
+    //self.datesArray = [[NSArray alloc] initWithObjects:@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec", nil];
+    
+    // Date labels for Aug 2014 to July 2015 (1 year)
+    self.datesArray = [[NSArray alloc] initWithObjects:@"Aug", @"Sep", @"Oct", @"Nov", @"Dec", @"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", nil];
     if ((index % 2) == 1) return [self.datesArray objectAtIndex:index];
     else return @"";
 }
